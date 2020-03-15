@@ -1,0 +1,92 @@
+{"frames": {
+
+"RHL_EF_REEL_00_0":
+{
+	"frame": {"x":1207,"y":976,"w":399,"h":974},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":1,"y":5,"w":399,"h":974},
+	"sourceSize": {"w":400,"h":980}
+},
+"RHL_EF_REEL_00_1":
+{
+	"frame": {"x":1608,"y":1,"w":399,"h":974},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":1,"y":4,"w":399,"h":974},
+	"sourceSize": {"w":400,"h":980}
+},
+"RHL_EF_REEL_00_2":
+{
+	"frame": {"x":1,"y":978,"w":400,"h":974},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":5,"w":400,"h":974},
+	"sourceSize": {"w":400,"h":980}
+},
+"RHL_EF_REEL_00_3":
+{
+	"frame": {"x":805,"y":1,"w":399,"h":977},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":1,"y":2,"w":399,"h":977},
+	"sourceSize": {"w":400,"h":980}
+},
+"RHL_EF_REEL_00_4":
+{
+	"frame": {"x":1608,"y":977,"w":399,"h":973},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":1,"y":6,"w":399,"h":973},
+	"sourceSize": {"w":400,"h":980}
+},
+"RHL_EF_REEL_00_5":
+{
+	"frame": {"x":1,"y":1,"w":400,"h":975},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":4,"w":400,"h":975},
+	"sourceSize": {"w":400,"h":980}
+},
+"RHL_EF_REEL_00_6":
+{
+	"frame": {"x":805,"y":980,"w":400,"h":973},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":6,"w":400,"h":973},
+	"sourceSize": {"w":400,"h":980}
+},
+"RHL_EF_REEL_00_7":
+{
+	"frame": {"x":1206,"y":1,"w":400,"h":973},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":5,"w":400,"h":973},
+	"sourceSize": {"w":400,"h":980}
+},
+"RHL_EF_REEL_00_8":
+{
+	"frame": {"x":403,"y":978,"w":400,"h":974},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":5,"w":400,"h":974},
+	"sourceSize": {"w":400,"h":980}
+},
+"RHL_EF_REEL_00_9":
+{
+	"frame": {"x":403,"y":1,"w":400,"h":975},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":4,"w":400,"h":975},
+	"sourceSize": {"w":400,"h":980}
+}},
+"meta": {
+	"app": "https://www.codeandweb.com/texturepacker",
+	"version": "1.0",
+	"image": "reelanticipation.png",
+	"format": "RGBA8888",
+	"size": {"w":2008,"h":1954},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:3d7a222bd58b4416a60a5cef1cb34afc:3b9634d5fb94fcde1ae7d47e0ead2888:d50d0aa5e7cc6b039e78ca9956c7d702$"
+}
+}

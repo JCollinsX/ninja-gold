@@ -1,0 +1,256 @@
+{
+  "frames": {
+    "LogoNetEnt-Comp-1_00014": {
+      "frame": {
+        "x": 2,
+        "y": 410,
+        "w": 395,
+        "h": 202
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 395,
+        "h": 202
+      },
+      "sourceSize": {
+        "w": 395,
+        "h": 202
+      }
+    },
+    "LogoNetEnt-Comp-1_00015": {
+      "frame": {
+        "x": 2,
+        "y": 13,
+        "w": 395,
+        "h": 202
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 395,
+        "h": 202
+      },
+      "sourceSize": {
+        "w": 395,
+        "h": 202
+      }
+    },
+    "LogoNetEnt-Comp-1_00016": {
+      "frame": {
+        "x": 206,
+        "y": 410,
+        "w": 395,
+        "h": 202
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 395,
+        "h": 202
+      },
+      "sourceSize": {
+        "w": 395,
+        "h": 202
+      }
+    },
+    "LogoNetEnt-Comp-1_00017": {
+      "frame": {
+        "x": 206,
+        "y": 13,
+        "w": 395,
+        "h": 202
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 395,
+        "h": 202
+      },
+      "sourceSize": {
+        "w": 395,
+        "h": 202
+      }
+    },
+    "LogoNetEnt-Comp-1_00018": {
+      "frame": {
+        "x": 410,
+        "y": 410,
+        "w": 395,
+        "h": 202
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 395,
+        "h": 202
+      },
+      "sourceSize": {
+        "w": 395,
+        "h": 202
+      }
+    },
+    "LogoNetEnt-Comp-1_00019": {
+      "frame": {
+        "x": 410,
+        "y": 13,
+        "w": 395,
+        "h": 202
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 395,
+        "h": 202
+      },
+      "sourceSize": {
+        "w": 395,
+        "h": 202
+      }
+    },
+    "LogoNetEnt-Comp-1_00020": {
+      "frame": {
+        "x": 614,
+        "y": 603,
+        "w": 395,
+        "h": 202
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 395,
+        "h": 202
+      },
+      "sourceSize": {
+        "w": 395,
+        "h": 202
+      }
+    },
+    "LogoNetEnt-Comp-1_00021": {
+      "frame": {
+        "x": 1011,
+        "y": 410,
+        "w": 395,
+        "h": 202
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 395,
+        "h": 202
+      },
+      "sourceSize": {
+        "w": 395,
+        "h": 202
+      }
+    },
+    "LogoNetEnt-Comp-1_00022": {
+      "frame": {
+        "x": 614,
+        "y": 399,
+        "w": 395,
+        "h": 202
+      },
+      "rotated": false,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 395,
+        "h": 202
+      },
+      "sourceSize": {
+        "w": 395,
+        "h": 202
+      }
+    },
+    "LogoNetEnt-Comp-1_00023": {
+      "frame": {
+        "x": 614,
+        "y": 2,
+        "w": 395,
+        "h": 202
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 395,
+        "h": 202
+      },
+      "sourceSize": {
+        "w": 395,
+        "h": 202
+      }
+    },
+    "LogoNetEnt-Comp-1_00024": {
+      "frame": {
+        "x": 818,
+        "y": 2,
+        "w": 395,
+        "h": 202
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 395,
+        "h": 202
+      },
+      "sourceSize": {
+        "w": 395,
+        "h": 202
+      }
+    },
+    "LogoNetEnt-Comp-1_00025": {
+      "frame": {
+        "x": 1022,
+        "y": 13,
+        "w": 395,
+        "h": 202
+      },
+      "rotated": true,
+      "trimmed": true,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 395,
+        "h": 202
+      },
+      "sourceSize": {
+        "w": 395,
+        "h": 202
+      }
+    }
+  },
+  "meta": {
+    "app": "https://www.codeandweb.com/texturepacker",
+    "version": "1.0",
+    "image": "Netent_Logo2.png",
+    "format": "RGBA8888",
+    "size": {
+      "w": 1226,
+      "h": 807
+    },
+    "scale": "1",
+    "smartupdate": "$TexturePacker:SmartUpdate:f35407106723d6818c92805cac2423ba:467378dd1a153a1f5255dc6867c3e289:de62c4130a72712ae995d05d7f4a14e5$"
+  }
+}

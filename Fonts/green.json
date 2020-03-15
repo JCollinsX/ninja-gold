@@ -1,0 +1,100 @@
+{"frames": {
+
+"0":
+{
+	"frame": {"x":681,"y":1,"w":77,"h":106},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":1,"w":77,"h":106},
+	"sourceSize": {"w":78,"h":108}
+},
+"1":
+{
+	"frame": {"x":236,"y":1,"w":51,"h":108},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":11,"y":0,"w":51,"h":108},
+	"sourceSize": {"w":78,"h":108}
+},
+"2":
+{
+	"frame": {"x":369,"y":1,"w":76,"h":107},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":0,"w":76,"h":107},
+	"sourceSize": {"w":78,"h":108}
+},
+"3":
+{
+	"frame": {"x":80,"y":1,"w":76,"h":108},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":0,"w":76,"h":108},
+	"sourceSize": {"w":78,"h":108}
+},
+"4":
+{
+	"frame": {"x":447,"y":1,"w":76,"h":107},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":0,"w":76,"h":107},
+	"sourceSize": {"w":78,"h":108}
+},
+"5":
+{
+	"frame": {"x":525,"y":1,"w":76,"h":107},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":0,"w":76,"h":107},
+	"sourceSize": {"w":78,"h":108}
+},
+"6":
+{
+	"frame": {"x":603,"y":1,"w":76,"h":107},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":0,"w":76,"h":107},
+	"sourceSize": {"w":78,"h":108}
+},
+"7":
+{
+	"frame": {"x":289,"y":1,"w":78,"h":107},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":0,"w":78,"h":107},
+	"sourceSize": {"w":78,"h":108}
+},
+"8":
+{
+	"frame": {"x":158,"y":1,"w":76,"h":108},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":2,"y":0,"w":76,"h":108},
+	"sourceSize": {"w":78,"h":108}
+},
+"9":
+{
+	"frame": {"x":1,"y":1,"w":77,"h":108},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":0,"w":77,"h":108},
+	"sourceSize": {"w":78,"h":108}
+},
+"x":
+{
+	"frame": {"x":760,"y":1,"w":60,"h":58},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":60,"h":58},
+	"sourceSize": {"w":60,"h":58}
+}},
+"meta": {
+	"app": "https://www.codeandweb.com/texturepacker",
+	"version": "1.0",
+	"image": "green-hd.png",
+	"format": "RGBA8888",
+	"size": {"w":821,"h":110},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:12462c56df4a22d10f668bf90195acfd:467a615240c7dd862b29e6df4b7696b0:a0e96cc691ea53de8ce458a4e744ff73$"
+}
+}

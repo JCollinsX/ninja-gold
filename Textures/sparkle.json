@@ -1,0 +1,124 @@
+{"frames": {
+
+"PIC_EF_TOUCH_00_0":
+{
+	"frame": {"x":1,"y":1,"w":400,"h":500},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":400,"h":500},
+	"sourceSize": {"w":400,"h":500}
+},
+"PIC_EF_TOUCH_00_1":
+{
+	"frame": {"x":403,"y":1,"w":400,"h":500},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":400,"h":500},
+	"sourceSize": {"w":400,"h":500}
+},
+"PIC_EF_TOUCH_00_2":
+{
+	"frame": {"x":805,"y":1,"w":400,"h":500},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":400,"h":500},
+	"sourceSize": {"w":400,"h":500}
+},
+"PIC_EF_TOUCH_00_3":
+{
+	"frame": {"x":1207,"y":1,"w":400,"h":500},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":400,"h":500},
+	"sourceSize": {"w":400,"h":500}
+},
+"PIC_EF_TOUCH_00_4":
+{
+	"frame": {"x":1609,"y":1,"w":400,"h":500},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":400,"h":500},
+	"sourceSize": {"w":400,"h":500}
+},
+"PIC_EF_TOUCH_00_5":
+{
+	"frame": {"x":1,"y":503,"w":400,"h":500},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":400,"h":500},
+	"sourceSize": {"w":400,"h":500}
+},
+"PIC_EF_TOUCH_00_6":
+{
+	"frame": {"x":403,"y":503,"w":400,"h":500},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":400,"h":500},
+	"sourceSize": {"w":400,"h":500}
+},
+"PIC_EF_TOUCH_00_7":
+{
+	"frame": {"x":805,"y":503,"w":400,"h":500},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":400,"h":500},
+	"sourceSize": {"w":400,"h":500}
+},
+"PIC_EF_TOUCH_00_8":
+{
+	"frame": {"x":1207,"y":503,"w":400,"h":500},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":400,"h":500},
+	"sourceSize": {"w":400,"h":500}
+},
+"PIC_EF_TOUCH_00_9":
+{
+	"frame": {"x":1609,"y":503,"w":400,"h":500},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":400,"h":500},
+	"sourceSize": {"w":400,"h":500}
+},
+"PIC_EF_TOUCH_00_10":
+{
+	"frame": {"x":1,"y":1005,"w":400,"h":500},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":400,"h":500},
+	"sourceSize": {"w":400,"h":500}
+},
+"PIC_EF_TOUCH_00_11":
+{
+	"frame": {"x":403,"y":1005,"w":400,"h":500},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":400,"h":500},
+	"sourceSize": {"w":400,"h":500}
+},
+"PIC_EF_TOUCH_00_12":
+{
+	"frame": {"x":805,"y":1005,"w":400,"h":500},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":400,"h":500},
+	"sourceSize": {"w":400,"h":500}
+},
+"PIC_EF_TOUCH_00_13":
+{
+	"frame": {"x":1207,"y":1005,"w":400,"h":500},
+	"rotated": false,
+	"trimmed": false,
+	"spriteSourceSize": {"x":0,"y":0,"w":400,"h":500},
+	"sourceSize": {"w":400,"h":500}
+}},
+"meta": {
+	"app": "https://www.codeandweb.com/texturepacker",
+	"version": "1.0",
+	"image": "sparkle.png",
+	"format": "RGBA8888",
+	"size": {"w":2010,"h":1506},
+	"scale": "1",
+	"smartupdate": "$TexturePacker:SmartUpdate:8e75b64790a6be93a582f04c288d58e8:c9981f1f0272222000f5f734b69fb5b0:6f9cbe36fadb985e655d031ec09febee$"
+}
+}
