@@ -91,7 +91,7 @@
 "meta": {
 	"app": "https://www.codeandweb.com/texturepacker",
 	"version": "1.0",
-	"image": "blue-hd.png",
+	"image": "blue.png",
 	"format": "RGBA8888",
 	"size": {"w":116,"h":1604},
 	"scale": "1",

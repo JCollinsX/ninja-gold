@@ -1,0 +1,19 @@
+<font>
+  <info face="red" size="72" bold="0" italic="0" charset="" unicode="" stretchH="100" smooth="1" aa="1" padding="2,2,2,2" spacing="0,0" outline="0"/>
+  <common lineHeight="110" base="112" scaleW="116" scaleH="1604" pages="1" packed="0"/>
+  <pages>
+    <page id="0" file="red.png"/>
+  </pages>
+  <chars count="10">
+    <char id="48" y="1" x="712" width="79" height="109" xoffset="0" yoffset="0" xadvance="79" page="0" chnl="15"/>
+    <char id="49" y="1" x="331" width="50" height="112" xoffset="0" yoffset="0" xadvance="50" page="0" chnl="15"/>
+    <char id="50" y="1" x="467" width="80" height="111" xoffset="0" yoffset="0" xadvance="80" page="0" chnl="15"/>
+    <char id="51" y="1" x="628" width="82" height="110" xoffset="0" yoffset="0" xadvance="82" page="0" chnl="15"/>
+    <char id="52" y="1" x="167" width="80" height="113" xoffset="0" yoffset="0" xadvance="80" page="0" chnl="15"/>
+    <char id="53" y="1" x="1" width="81" height="114" xoffset="0" yoffset="0" xadvance="81" page="0" chnl="15"/>
+    <char id="54" y="1" x="549" width="77" height="111" xoffset="0" yoffset="0" xadvance="77" page="0" chnl="15"/>
+    <char id="55" y="1" x="383" width="82" height="111" xoffset="0" yoffset="0" xadvance="82" page="0" chnl="15"/>
+    <char id="56" y="1" x="84" width="81" height="113" xoffset="0" yoffset="0" xadvance="81" page="0" chnl="15"/>
+    <char id="57" y="1" x="249" width="80" height="112" xoffset="0" yoffset="0" xadvance="80" page="0" chnl="15"/>
+  </chars>
+</font>

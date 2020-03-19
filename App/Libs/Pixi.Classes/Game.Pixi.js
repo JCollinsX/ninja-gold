@@ -192,7 +192,7 @@ Class.Mixin(Game, {
 
 			this.each(assets, function(asset) {
 
-				loader.pixiLoader.add(asset.name, asset.url, {crossOrigin: "*"})
+				loader.pixiLoader.add(asset.name, asset.url, {crossOrigin: true})
 
 			});
 

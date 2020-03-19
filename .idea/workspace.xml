@@ -2,7 +2,26 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dd7d46ce-6e1c-4eaa-84c4-b489fb97a84a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Fonts/blue.fnt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Fonts/red.fnt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/helpscreens/page1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/helpscreens/page2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/helpscreens/page3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/helpscreens/page4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/helpscreens/page5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/helpscreens/page6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/helpscreens/page7.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/helpscreens/page8.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Images/helpscreens/page9.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/Libs/Pixi.Classes/Game.Pixi.js" beforeDir="false" afterPath="$PROJECT_DIR$/App/Libs/Pixi.Classes/Game.Pixi.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/Libs/Pixi/4.7.1-ga-ready/pixi.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/App/Libs/Pixi/4.7.1-ga-ready/pixi.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/Screens/Gameplay.js" beforeDir="false" afterPath="$PROJECT_DIR$/App/Screens/Gameplay.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/Setting.js" beforeDir="false" afterPath="$PROJECT_DIR$/App/Setting.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Fonts/blue.json" beforeDir="false" afterPath="$PROJECT_DIR$/Fonts/blue.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Fonts/green.json" beforeDir="false" afterPath="$PROJECT_DIR$/Fonts/green.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Fonts/red.json" beforeDir="false" afterPath="$PROJECT_DIR$/Fonts/red.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,6 +41,13 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Fonts" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\pkm\xampp7\htdocs\slot\ninja-gold\Fonts" />
+      <recent name="E:\pkm\xampp7\htdocs\slot\ninja-gold\Images" />
+    </key>
   </component>
   <component name="ServiceViewManager">
     <option name="viewStates">
@@ -45,21 +71,53 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1584300394986</updated>
-      <workItem from="1584300396162" duration="5589000" />
+      <workItem from="1584300396162" duration="6466000" />
+      <workItem from="1584355677491" duration="1222000" />
+      <workItem from="1584375059330" duration="19266000" />
+      <workItem from="1584429037220" duration="9260000" />
+      <workItem from="1584457606554" duration="18548000" />
     </task>
+    <task id="LOCAL-00001" summary="updated gitignore file">
+      <created>1584307555461</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1584307555461</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="updated gitignore file" />
+    <option name="LAST_COMMIT_MESSAGE" value="updated gitignore file" />
+  </component>
   <component name="WindowStateProjectService">
-    <state x="656" y="257" width="607" height="536" key="find.popup" timestamp="1584306260301">
+    <state x="724" y="329" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1584474399806">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="656" y="257" width="607" height="536" key="find.popup/1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1584306260301" />
-    <state x="623" y="227" width="672" height="678" key="search.everywhere.popup" timestamp="1584306248923">
+    <state x="724" y="329" key="#com.intellij.fileTypes.FileTypeChooser/1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1584474399806" />
+    <state x="585" y="119" key="CommitChangelistDialog2" timestamp="1584307554678">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="623" y="227" width="672" height="678" key="search.everywhere.popup/1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1584306248923" />
+    <state x="585" y="119" key="CommitChangelistDialog2/1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1584307554678" />
+    <state x="552" y="259" key="Vcs.Push.Dialog.v2" timestamp="1584307556677">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="552" y="259" key="Vcs.Push.Dialog.v2/1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1584307556677" />
+    <state x="647" y="156" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1584471803012">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="647" y="156" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1584471803012" />
+    <state x="656" y="257" width="737" height="606" key="find.popup" timestamp="1584479110732">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="656" y="257" width="737" height="606" key="find.popup/1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1584479110732" />
+    <state x="623" y="227" width="672" height="678" key="search.everywhere.popup" timestamp="1584473525346">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="623" y="227" width="672" height="678" key="search.everywhere.popup/1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1584473525346" />
   </component>
 </project>

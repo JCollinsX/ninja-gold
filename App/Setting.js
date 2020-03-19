@@ -157,9 +157,14 @@
         "logo": { "type": "image", "url": "Images/logo.png" },
 
         "background": { "type": "image", "url": "Images/basegame/background.png" },
+        "bonusBackground": { "type": "image", "url": "Images/bonusgame/freespin/background.png" },
         "reels": { "type": "image", "url": "Images/basegame/reels.png" },
+        "bonusReels": { "type": "image", "url": "Images/bonusgame/bonusreel.png" },
         "whiteflash": { "type": "image", "url": "Images/basegame/whiteflash.png" },
         "30lines": { "type": "image", "url": "Images/basegame/30lines.png" },
+        "bonus30lines": { "type": "image", "url": "Images/bonusgame/freespin/30lines.png" },
+
+        "pickBackground": { "type": "image", "url": "Images/bonusgame/pick/background.png" },
 
         "bonus_freespin_reel": { "type": "image", "url": "Images/bonusgame/bonusreel.png" },
         "bonus_freespin_30lines": { "type": "image", "url": "Images/bonusgame/freespin/30lines.png" },
@@ -222,16 +227,25 @@
         "wins_win": { "type": "image", "url": "Images/wins/win.png" },
         "wins_winBox": { "type": "image", "url": "Images/wins/winBox.png" },
 
+        "helpPage1": { "type": "image", "url": "Images/helpscreens/page1.png" },
+        "helpPage2": { "type": "image", "url": "Images/helpscreens/page2.png" },
+        "helpPage3": { "type": "image", "url": "Images/helpscreens/page3.png" },
+        "helpPage4": { "type": "image", "url": "Images/helpscreens/page4.png" },
+        "helpPage5": { "type": "image", "url": "Images/helpscreens/page5.png" },
+        "helpPage6": { "type": "image", "url": "Images/helpscreens/page6.png" },
+        "helpPage7": { "type": "image", "url": "Images/helpscreens/page7.png" },
+        "helpPage8": { "type": "image", "url": "Images/helpscreens/page8.png" },
+        "helpPage9": { "type": "image", "url": "Images/helpscreens/page9.png" },
         // ########## Font ###########
         "font": { "type": "bitmap-font", "url": "Fonts/font.fnt" },
-        "blue": { "type": "bitmap-font", "url": "Fonts/blue.json" },
-        "green": { "type": "bitmap-font", "url": "Fonts/green.json" },
-        "red": { "type": "bitmap-font", "url": "Fonts/red.json" },
+        "blue": { "type": "bitmap-font", "url": "Fonts/blue.fnt" },
+        // "green": { "type": "bitmap-font", "url": "Fonts/green.json" },
+        "red": { "type": "bitmap-font", "url": "Fonts/red.fnt" },
 
         // ########### Texture ############
         "Netent_Logo": { "type": "atlas", "url": "Textures/featureSplash/Netent_Logo.json" },
         "Netent_Logo2": { "type": "atlas", "url": "Textures/featureSplash/Netent_Logo2.json" },
-        
+
         "confetti": { "type": "atlas", "url": "Textures/confetti.json" },
         "panel": { "type": "atlas", "url": "Textures/panel.json" },
         "reelanticipation": { "type": "atlas", "url": "Textures/reelanticipation.json" },
@@ -243,7 +257,7 @@
         "anim_12drop": { "type": "atlas", "url": "Textures/animations/12drop.json" },
         "anim_13": { "type": "atlas", "url": "Textures/animations/13.json" },
         "anim_13drop": { "type": "atlas", "url": "Textures/animations/13drop.json" },
-                
+
         //############ Sound #######
         "anticipation": { "type": "sound", "url": "Sounds/anticipation.mp3" },
         "reel_stop": { "type": "sound", "url": "Sounds/reel.mp3" },
