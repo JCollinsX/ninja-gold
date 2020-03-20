@@ -165,6 +165,21 @@ App.Gameplay = new Screen({
                                         },
                                     ]
                                 },
+                                {
+                                    name: 'startfreespin button', scale: [1, 1], visible: false,
+                                    button: 'button', type: 'sprite', image: 'Spin_ButtonFreeUp', //"w":286,"h":154
+                                    childs: [
+                                        { name: 'startfreespin button glow', type: 'sprite', image: 'Spin_ButtonFreeOver', alpha: 0 },
+                                        {
+                                            name: 'startfreespin button label', alpha: 1, type: 'text', text: 'SPIN', position: [0, -25],
+                                            styles: { align: 'center', fontFamily: 'Arial', fontSize: '25px', padding: 5, fill: 0xffffff, fontWeight: 'bold' },
+                                        },
+                                        {
+                                            name: 'freespin count text', alpha: 1, type: 'text', text: '0', position: [0, 10],
+                                            styles: { align: 'center', fontFamily: 'Arial', fontSize: '25px', padding: 5, fill: 0xffffff, fontWeight: 'bold' },
+                                        },
+                                    ]
+                                }
                             ]
                         },
                         {
@@ -426,6 +441,509 @@ App.Gameplay = new Screen({
             ]
         },
         {
+            name: 'PickContainer',
+            visible: false,
+            scaleStrategyPortrait: ['fit-to-screen', 1920, 1080],
+            scaleStrategyLandscape: ['fit-to-screen', 1920, 1080],
+            childs: [
+                {
+                    type: 'sprite',
+                    image: 'bonus_pick_background'
+                },
+                {
+                    position: [300, -450],
+                    childs: [
+                        {
+                            type: 'sprite',
+                            position: [-128, 20],
+                            scale: 0.51,
+                            image: 'bonus_pick_textremaining'
+                        },
+                        {
+                            type: 'sprite',
+                            position: [-205, -40],
+                            scale: 0.35,
+                            image: 'bonus_freespin_freetext'
+                        },
+                        {
+                            type: 'sprite',
+                            position: [-45, -40],
+                            scale: 0.35,
+                            image: 'bonus_freespin_gametext'
+                        },
+                    ]
+                },
+                {
+                    name: 'pick remaining text',
+                    type: 'bitmap-text',
+                    text: '0',
+                    drawed: 0,
+                    position: [400, -485],
+                    styles: {
+                        align: 'left',
+                        font: {
+                            name: 'blue',
+                            size: 70
+                        },
+                        tint: 0xFFFFFF
+                    }
+                },
+                {
+                    name: 'pick item container',
+                    visible: false,
+                    childs: [
+                        {
+                            position: [0, -200],
+                            childs: [
+                                {
+                                    name: 'pick item 1',
+                                    event: 'pick item',
+                                    color: 'brown',
+                                    position: [-715, 0],
+                                    childs: [
+                                        {
+                                            name: 'pick item 1 back',
+                                            type: 'sprite',
+                                            image: 'bonus_pick_pickbrown',
+                                        },
+                                        {
+                                            name: 'pick item 1 glow',
+                                            type: 'movie-clip',
+                                            frames: [
+                                                'PIC_EF_TOUCH_00_0','PIC_EF_TOUCH_00_1','PIC_EF_TOUCH_00_2','PIC_EF_TOUCH_00_3','PIC_EF_TOUCH_00_4',
+                                                'PIC_EF_TOUCH_00_5','PIC_EF_TOUCH_00_6','PIC_EF_TOUCH_00_7','PIC_EF_TOUCH_00_8','PIC_EF_TOUCH_00_9',
+                                                'PIC_EF_TOUCH_00_10','PIC_EF_TOUCH_00_11','PIC_EF_TOUCH_00_12','PIC_EF_TOUCH_00_13'
+                                            ],
+                                            speed: 0.2,
+                                            loop: false,
+                                            visible: false
+                                        },
+                                        {
+                                            name: 'pick item 1 touch',
+                                            type: 'sprite',
+                                            position: [0, 20],
+                                            image: 'bonus_pick_texttouch',
+                                            visible: false
+                                        }
+                                    ]
+                                },
+                                {
+                                    name: 'pick item 2',
+                                    event: 'pick item',
+                                    color: 'green',
+                                    position: [-440, 0],
+                                    childs: [
+                                        {
+                                            name: 'pick item 2 back',
+                                            type: 'sprite',
+                                            image: 'bonus_pick_pickgreen',
+                                        },
+                                        {
+                                            name: 'pick item 2 glow',
+                                            type: 'movie-clip',
+                                            frames: [
+                                                'PIC_EF_TOUCH_00_0','PIC_EF_TOUCH_00_1','PIC_EF_TOUCH_00_2','PIC_EF_TOUCH_00_3','PIC_EF_TOUCH_00_4',
+                                                'PIC_EF_TOUCH_00_5','PIC_EF_TOUCH_00_6','PIC_EF_TOUCH_00_7','PIC_EF_TOUCH_00_8','PIC_EF_TOUCH_00_9',
+                                                'PIC_EF_TOUCH_00_10','PIC_EF_TOUCH_00_11','PIC_EF_TOUCH_00_12','PIC_EF_TOUCH_00_13'
+                                            ],
+                                            speed: 0.2,
+                                            loop: false,
+                                            visible: false
+                                        },
+                                        {
+                                            name: 'pick item 2 touch',
+                                            type: 'sprite',
+                                            position: [0, 20],
+                                            image: 'bonus_pick_texttouch',
+                                            visible: false
+                                        }
+                                    ]
+                                },
+                                {
+                                    name: 'pick item 3',
+                                    event: 'pick item',
+                                    color: 'red',
+                                    position: [-165, 0],
+                                    childs: [
+                                        {
+                                            name: 'pick item 3 back',
+                                            type: 'sprite',
+                                            image: 'bonus_pick_pickred',
+                                        },
+                                        {
+                                            name: 'pick item 3 glow',
+                                            type: 'movie-clip',
+                                            frames: [
+                                                'PIC_EF_TOUCH_00_0','PIC_EF_TOUCH_00_1','PIC_EF_TOUCH_00_2','PIC_EF_TOUCH_00_3','PIC_EF_TOUCH_00_4',
+                                                'PIC_EF_TOUCH_00_5','PIC_EF_TOUCH_00_6','PIC_EF_TOUCH_00_7','PIC_EF_TOUCH_00_8','PIC_EF_TOUCH_00_9',
+                                                'PIC_EF_TOUCH_00_10','PIC_EF_TOUCH_00_11','PIC_EF_TOUCH_00_12','PIC_EF_TOUCH_00_13'
+                                            ],
+                                            speed: 0.2,
+                                            loop: false,
+                                            visible: false
+                                        },
+                                        {
+                                            name: 'pick item 3 touch',
+                                            type: 'sprite',
+                                            position: [0, 20],
+                                            image: 'bonus_pick_texttouch',
+                                            visible: false
+                                        }
+                                    ]
+                                },
+                                {
+                                    name: 'pick item 4',
+                                    event: 'pick item',
+                                    color: 'black',
+                                    position: [110, 0],
+                                    childs: [
+                                        {
+                                            name: 'pick item 4 back',
+                                            type: 'sprite',
+                                            image: 'bonus_pick_pickblack',
+                                        },
+                                        {
+                                            name: 'pick item 4 glow',
+                                            type: 'movie-clip',
+                                            frames: [
+                                                'PIC_EF_TOUCH_00_0','PIC_EF_TOUCH_00_1','PIC_EF_TOUCH_00_2','PIC_EF_TOUCH_00_3','PIC_EF_TOUCH_00_4',
+                                                'PIC_EF_TOUCH_00_5','PIC_EF_TOUCH_00_6','PIC_EF_TOUCH_00_7','PIC_EF_TOUCH_00_8','PIC_EF_TOUCH_00_9',
+                                                'PIC_EF_TOUCH_00_10','PIC_EF_TOUCH_00_11','PIC_EF_TOUCH_00_12','PIC_EF_TOUCH_00_13'
+                                            ],
+                                            speed: 0.2,
+                                            loop: false,
+                                            visible: false
+                                        },
+                                        {
+                                            name: 'pick item 4 touch',
+                                            type: 'sprite',
+                                            position: [0, 20],
+                                            image: 'bonus_pick_texttouch',
+                                            visible: false
+                                        }
+                                    ]
+                                },
+                                {
+                                    name: 'pick item 5',
+                                    event: 'pick item',
+                                    color: 'blue',
+                                    position: [385, 0],
+                                    childs: [
+                                        {
+                                            name: 'pick item 5 back',
+                                            type: 'sprite',
+                                            image: 'bonus_pick_pickblue',
+                                        },
+                                        {
+                                            name: 'pick item 5 glow',
+                                            type: 'movie-clip',
+                                            frames: [
+                                                'PIC_EF_TOUCH_00_0','PIC_EF_TOUCH_00_1','PIC_EF_TOUCH_00_2','PIC_EF_TOUCH_00_3','PIC_EF_TOUCH_00_4',
+                                                'PIC_EF_TOUCH_00_5','PIC_EF_TOUCH_00_6','PIC_EF_TOUCH_00_7','PIC_EF_TOUCH_00_8','PIC_EF_TOUCH_00_9',
+                                                'PIC_EF_TOUCH_00_10','PIC_EF_TOUCH_00_11','PIC_EF_TOUCH_00_12','PIC_EF_TOUCH_00_13'
+                                            ],
+                                            speed: 0.2,
+                                            loop: false,
+                                            visible: false
+                                        },
+                                        {
+                                            name: 'pick item 5 touch',
+                                            type: 'sprite',
+                                            position: [0, 20],
+                                            image: 'bonus_pick_texttouch',
+                                            visible: false
+                                        }
+                                    ]
+                                },
+                            ]
+                        },
+                        {
+                            position: [-100, 200],
+                            childs: [
+                                {
+                                    name: 'pick item 6',
+                                    event: 'pick item',
+                                    color: 'brown',
+                                    position: [-715, 0],
+                                    childs: [
+                                        {
+                                            name: 'pick item 6 back',
+                                            type: 'sprite',
+                                            image: 'bonus_pick_pickbrown',
+                                        },
+                                        {
+                                            name: 'pick item 6 glow',
+                                            type: 'movie-clip',
+                                            frames: [
+                                                'PIC_EF_TOUCH_00_0','PIC_EF_TOUCH_00_1','PIC_EF_TOUCH_00_2','PIC_EF_TOUCH_00_3','PIC_EF_TOUCH_00_4',
+                                                'PIC_EF_TOUCH_00_5','PIC_EF_TOUCH_00_6','PIC_EF_TOUCH_00_7','PIC_EF_TOUCH_00_8','PIC_EF_TOUCH_00_9',
+                                                'PIC_EF_TOUCH_00_10','PIC_EF_TOUCH_00_11','PIC_EF_TOUCH_00_12','PIC_EF_TOUCH_00_13'
+                                            ],
+                                            speed: 0.2,
+                                            loop: false,
+                                            visible: false
+                                        },
+                                        {
+                                            name: 'pick item 6 touch',
+                                            type: 'sprite',
+                                            position: [0, 20],
+                                            image: 'bonus_pick_texttouch',
+                                            visible: false
+                                        }
+                                    ]
+                                },
+                                {
+                                    name: 'pick item 7',
+                                    event: 'pick item',
+                                    color: 'green',
+                                    position: [-440, 0],
+                                    childs: [
+                                        {
+                                            name: 'pick item 7 back',
+                                            type: 'sprite',
+                                            image: 'bonus_pick_pickgreen',
+                                        },
+                                        {
+                                            name: 'pick item 7 glow',
+                                            type: 'movie-clip',
+                                            frames: [
+                                                'PIC_EF_TOUCH_00_0','PIC_EF_TOUCH_00_1','PIC_EF_TOUCH_00_2','PIC_EF_TOUCH_00_3','PIC_EF_TOUCH_00_4',
+                                                'PIC_EF_TOUCH_00_5','PIC_EF_TOUCH_00_6','PIC_EF_TOUCH_00_7','PIC_EF_TOUCH_00_8','PIC_EF_TOUCH_00_9',
+                                                'PIC_EF_TOUCH_00_10','PIC_EF_TOUCH_00_11','PIC_EF_TOUCH_00_12','PIC_EF_TOUCH_00_13'
+                                            ],
+                                            speed: 0.2,
+                                            loop: false,
+                                            visible: false
+                                        },
+                                        {
+                                            name: 'pick item 7 touch',
+                                            type: 'sprite',
+                                            position: [0, 20],
+                                            image: 'bonus_pick_texttouch',
+                                            visible: false
+                                        }
+                                    ]
+                                },
+                                {
+                                    name: 'pick item 8',
+                                    event: 'pick item',
+                                    color: 'red',
+                                    position: [-165, 0],
+                                    childs: [
+                                        {
+                                            name: 'pick item 8 back',
+                                            type: 'sprite',
+                                            image: 'bonus_pick_pickred',
+                                        },
+                                        {
+                                            name: 'pick item 8 glow',
+                                            type: 'movie-clip',
+                                            frames: [
+                                                'PIC_EF_TOUCH_00_0','PIC_EF_TOUCH_00_1','PIC_EF_TOUCH_00_2','PIC_EF_TOUCH_00_3','PIC_EF_TOUCH_00_4',
+                                                'PIC_EF_TOUCH_00_5','PIC_EF_TOUCH_00_6','PIC_EF_TOUCH_00_7','PIC_EF_TOUCH_00_8','PIC_EF_TOUCH_00_9',
+                                                'PIC_EF_TOUCH_00_10','PIC_EF_TOUCH_00_11','PIC_EF_TOUCH_00_12','PIC_EF_TOUCH_00_13'
+                                            ],
+                                            speed: 0.2,
+                                            loop: false,
+                                            visible: false
+                                        },
+                                        {
+                                            name: 'pick item 8 touch',
+                                            type: 'sprite',
+                                            position: [0, 20],
+                                            image: 'bonus_pick_texttouch',
+                                            visible: false
+                                        }
+                                    ]
+                                },
+                                {
+                                    name: 'pick item 9',
+                                    event: 'pick item',
+                                    color: 'black',
+                                    position: [110, 0],
+                                    childs: [
+                                        {
+                                            name: 'pick item 9 back',
+                                            type: 'sprite',
+                                            image: 'bonus_pick_pickblack',
+                                        },
+                                        {
+                                            name: 'pick item 9 glow',
+                                            type: 'movie-clip',
+                                            frames: [
+                                                'PIC_EF_TOUCH_00_0','PIC_EF_TOUCH_00_1','PIC_EF_TOUCH_00_2','PIC_EF_TOUCH_00_3','PIC_EF_TOUCH_00_4',
+                                                'PIC_EF_TOUCH_00_5','PIC_EF_TOUCH_00_6','PIC_EF_TOUCH_00_7','PIC_EF_TOUCH_00_8','PIC_EF_TOUCH_00_9',
+                                                'PIC_EF_TOUCH_00_10','PIC_EF_TOUCH_00_11','PIC_EF_TOUCH_00_12','PIC_EF_TOUCH_00_13'
+                                            ],
+                                            speed: 0.2,
+                                            loop: false,
+                                            visible: false
+                                        },
+                                        {
+                                            name: 'pick item 9 touch',
+                                            type: 'sprite',
+                                            position: [0, 20],
+                                            image: 'bonus_pick_texttouch',
+                                            visible: false
+                                        }
+                                    ]
+                                },
+                                {
+                                    name: 'pick item 10',
+                                    event: 'pick item',
+                                    color: 'blue',
+                                    position: [385, 0],
+                                    childs: [
+                                        {
+                                            name: 'pick item 10 back',
+                                            type: 'sprite',
+                                            image: 'bonus_pick_pickblue',
+                                        },
+                                        {
+                                            name: 'pick item 10 glow',
+                                            type: 'movie-clip',
+                                            frames: [
+                                                'PIC_EF_TOUCH_00_0','PIC_EF_TOUCH_00_1','PIC_EF_TOUCH_00_2','PIC_EF_TOUCH_00_3','PIC_EF_TOUCH_00_4',
+                                                'PIC_EF_TOUCH_00_5','PIC_EF_TOUCH_00_6','PIC_EF_TOUCH_00_7','PIC_EF_TOUCH_00_8','PIC_EF_TOUCH_00_9',
+                                                'PIC_EF_TOUCH_00_10','PIC_EF_TOUCH_00_11','PIC_EF_TOUCH_00_12','PIC_EF_TOUCH_00_13'
+                                            ],
+                                            speed: 0.2,
+                                            loop: false,
+                                            visible: false
+                                        },
+                                        {
+                                            name: 'pick item 10 touch',
+                                            type: 'sprite',
+                                            position: [0, 20],
+                                            image: 'bonus_pick_texttouch',
+                                            visible: false
+                                        }
+                                    ]
+                                },
+                            ]
+                        },
+                    ]
+                },
+                {
+                    name: 'pick ready labels',
+                    childs: [
+                        {
+                            name: 'pick pickscroll text',
+                            type: 'sprite',
+                            image: 'bonus_pick_textpick',
+                            position: [-100, -200]
+                        },
+                        {
+                            name: 'pick until text',
+                            childs: [
+                                {
+                                    type: 'sprite',
+                                    position: [-600, 0],
+                                    image: 'bonus_pick_textuntil'
+                                },
+                                {
+                                    type: 'sprite',
+                                    position: [-100, 0],
+                                    image: 'bonus_freespin_freetext'
+                                },
+                                {
+                                    type: 'sprite',
+                                    position: [360, 0],
+                                    image: 'bonus_freespin_gametext'
+                                },
+                            ]
+                        },
+                        {
+                            name: 'pick given text',
+                            type: 'sprite',
+                            image: 'bonus_pick_textgiven',
+                            position: [-100, 200]
+                        }
+                    ]
+                },
+                {
+                    name: 'pick open container',
+                    position: [-200, 0],
+                    childs: [
+                        {
+                            name: 'pick open back',
+                            type: 'sprite',
+                            image: 'bonus_pick_pickgreenopen',
+                            visible: false,
+                        },
+                        {
+                            name: 'pick open baseup container',
+                            visible: false,
+                            position: [-40, 0],
+                            childs: [
+                                {
+                                    name: 'pick open baseup sprite',
+                                    type: 'sprite',
+                                    scale: 2,
+                                    image: 'jpearth'
+                                },
+                                {
+                                    name: 'pick open baseup header',
+                                    type: 'sprite',
+                                    position: [0, -220],
+                                    scale: 1.5,
+                                    image: 'jpearthheader'
+                                },
+                                {
+                                    type: 'sprite',
+                                    position: [0, 220],
+                                    image: 'bonus_pick_textbaseup'
+                                }
+                            ]
+                        },
+                        {
+                            name: 'pick open remaining container',
+                            visible: false,
+                            position: [-40, 0],
+                            childs: [
+                                {
+                                    type: 'sprite',
+                                    position: [0, -180],
+                                    image: 'bonus_pick_textremaining'
+                                },
+                                {
+                                    name: 'pick open remaining text',
+                                    type: 'bitmap-text',
+                                    text: ' +5',
+                                    styles: { align: 'center', font: { name: 'blue', size: 90 }, tint: 0xFFFFFF }
+                                }
+                            ]
+                        },
+                        {
+                            name: 'pick open begin container',
+                            position: [-40, 0],
+                            visible: false,
+                            childs: [
+                                {
+                                    type: 'sprite',
+                                    position: [0, -100],
+                                    image: 'bonus_pick_textbegin'
+                                },
+                                {
+                                    name: 'pick open begin value',
+                                    type: 'bitmap-text',
+                                    position: [-30, 90],
+                                    text: ' +10 ',
+                                    styles: { align: 'center', font: { name: 'blue', size: 70 }, tint: 0xFFFFFF }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    name: 'pick item glow',
+                    type: 'sprite',
+                    image: 'jpearthglow',
+                    visible: false
+                }
+            ]
+        },
+        {
             name: 'JackpotContainer',
             scaleStrategyPortrait: ['fit-to-screen', 1920, 1080], scaleStrategyLandscape: ['fit-to-screen', 1920, 1080],
             childs: [
@@ -492,277 +1010,185 @@ App.Gameplay = new Screen({
                             ]
                         },
                     ]
+                },
+                {
+                    name: 'pick jackpot container', visible: false, position: [740, -60], childs: [
+                        {
+                            name: 'pick jackpot earth', position: [0, -(2 - 0) * 177], drawed: 0, childs: [
+                                { name: 'pick jackpot earth bg', position: [0, 50], type: 'sprite', image: 'jackpotbg' },
+                                { name: 'pick jackpot earth icon', position: [-84, 0], type: 'sprite', image: 'jpearth' },
+                                { name: 'pick jackpot earth label', position: [-80, -65], scale: 0.5, type: 'sprite', image: 'jpearthheader' },
+                                { type: 'sprite', image: 'splat', position: [120, 0] },
+                                { //###### bitmap-font  used !!!!!
+                                    name: 'pick jackpot earth text', anchor: [1, 0.5], position: [30, 50], type: 'bitmap-text', text: '900', scale: 0.6,
+                                    styles: { align: 'right', font: { name: 'font', size: 90 }, tint: 0xFFFFFF }
+                                },
+                                { position: [120, 0], childs: [
+                                        { type: 'sprite', image: 'last', position: [0, -70] },
+                                        {
+                                            name: 'pick jackpot earth value',  type: 'bitmap-text', text: '18', position: [0, 20],
+                                            styles: { align: 'right', font: { name: 'red', size: 70 }, tint: 0xFFFFFF }
+                                        },
+                                    ]
+                                },
+                                { name: 'pick jackpot earth glow', position: [-84, 0], type: 'sprite', image: 'jpearthglow', alpha: 0 },
+                            ]
+                        },
+                        {
+                            name: 'pick jackpot fire', position: [0, -(2 - 1) * 177], drawed: 0, childs: [
+                                { name: 'pick jackpot fire bg', position: [0, 50], type: 'sprite', image: 'jackpotbg' },
+                                { name: 'pick jackpot fire icon', position: [-84, 0], type: 'sprite', image: 'jpfire' },
+                                { name: 'pick jackpot fire label', position: [-80, -65], scale: 0.5, type: 'sprite', image: 'jpfireheader' },
+                                { type: 'sprite', image: 'splat', position: [120, 0] },
+                                { //###### bitmap-font  used !!!!!
+                                    name: 'pick jackpot fire text', anchor: [1, 0.5], position: [30, 50], type: 'bitmap-text', text: '900', scale: 0.6,
+                                    styles: { align: 'right', font: { name: 'font', size: 90 }, tint: 0xFFFFFF }
+                                },
+                                { position: [120, 0], childs: [
+                                        { type: 'sprite', image: 'last', position: [0, -70] },
+                                        {
+                                            name: 'pick jackpot fire value',  type: 'bitmap-text', text: '18', position: [0, 20],
+                                            styles: { align: 'right', font: { name: 'red', size: 70 }, tint: 0xFFFFFF }
+                                        },
+                                    ]
+                                },
+                                { name: 'pick jackpot fire glow', position: [-84, 0], type: 'sprite', image: 'jjpfireglow', alpha: 0 },
+                            ]
+                        },
+                        {
+                            name: 'pick jackpot water', position: [0, -(2 - 2) * 177], drawed: 0, childs: [
+                                { name: 'pick jackpot water bg', position: [0, 50], type: 'sprite', image: 'jackpotbg' },
+                                { name: 'pick jackpot water icon', position: [-84, 0], type: 'sprite', image: 'jpwater' },
+                                { name: 'pick jackpot water label', position: [-80, -65], scale: 0.5, type: 'sprite', image: 'jpwaterheader' },
+                                { type: 'sprite', image: 'splat', position: [120, 0] },
+                                { //###### bitmap-font  used !!!!!
+                                    name: 'pick jackpot water text', anchor: [1, 0.5], position: [30, 50], type: 'bitmap-text', text: '900', scale: 0.6,
+                                    styles: { align: 'right', font: { name: 'font', size: 90 }, tint: 0xFFFFFF }
+                                },
+                                { position: [120, 0], childs: [
+                                        { type: 'sprite', image: 'last', position: [0, -70] },
+                                        {
+                                            name: 'pick jackpot water value',  type: 'bitmap-text', text: '18', position: [0, 20],
+                                            styles: { align: 'right', font: { name: 'red', size: 70 }, tint: 0xFFFFFF }
+                                        },
+                                    ]
+                                },
+                                { name: 'pick jackpot water glow', position: [-84, 0], type: 'sprite', image: 'jpwaterglow', alpha: 0 },
+                            ]
+                        },
+                        {
+                            name: 'pick jackpot thunder', position: [0, -(2 - 3) * 177], drawed: 0, childs: [
+                                { name: 'pick jackpot thunder bg', position: [0, 50], type: 'sprite', image: 'jackpotbg' },
+                                { name: 'pick jackpot thunder icon', position: [-84, 0], type: 'sprite', image: 'jpthunder' },
+                                { name: 'pick jackpot thunder label', position: [-80, -65], scale: 0.5, type: 'sprite', image: 'jpthunderheader' },
+                                { type: 'sprite', image: 'splat', position: [120, 0] },
+                                { //###### bitmap-font  used !!!!!
+                                    name: 'pick jackpot thunder text', anchor: [1, 0.5], position: [30, 50], type: 'bitmap-text', text: '900', scale: 0.6,
+                                    styles: { align: 'right', font: { name: 'font', size: 90 }, tint: 0xFFFFFF }
+                                },
+                                { position: [120, 0], childs: [
+                                        { type: 'sprite', image: 'last', position: [0, -70] },
+                                        {
+                                            name: 'pick jackpot thunder value',  type: 'bitmap-text', text: '18', position: [0, 20],
+                                            styles: { align: 'right', font: { name: 'red', size: 70 }, tint: 0xFFFFFF }
+                                        },
+                                    ]
+                                },
+                                { name: 'pick jackpot thunder glow', position: [-84, 0], type: 'sprite', image: 'jpthunderglow', alpha: 0 },
+                            ]
+                        },
+                        {
+                            name: 'pick jackpot wind', position: [0, -(2 - 4) * 177], drawed: 0, childs: [
+                                { name: 'pick jackpot wind bg', position: [0, 50], type: 'sprite', image: 'jackpotbg' },
+                                { name: 'pick jackpot wind icon', position: [-84, 0], type: 'sprite', image: 'jpwind' },
+                                { name: 'pick jackpot wind label', position: [-80, -65], scale: 0.5, type: 'sprite', image: 'jpwindheader' },
+                                { type: 'sprite', image: 'splat', position: [120, 0] },
+                                { //###### bitmap-font  used !!!!!
+                                    name: 'pick jackpot wind text', anchor: [1, 0.5], position: [30, 50], type: 'bitmap-text', text: '900', scale: 0.6,
+                                    styles: { align: 'right', font: { name: 'font', size: 90 }, tint: 0xFFFFFF }
+                                },
+                                { position: [120, 0], childs: [
+                                        { type: 'sprite', image: 'last', position: [0, -70] },
+                                        {
+                                            name: 'pick jackpot wind value',  type: 'bitmap-text', text: '18', position: [0, 20],
+                                            styles: { align: 'right', font: { name: 'red', size: 70 }, tint: 0xFFFFFF }
+                                        },
+                                    ]
+                                },
+                                { name: 'pick jackpot wind glow', position: [-84, 0], type: 'sprite', image: 'jpwindglow', alpha: 0 },
+                            ]
+                        },
+                    ]
                 }
             ]
         },
         {
-            name: 'PickContainer',
+            name: 'FreespinWonContainer',
             visible: false,
             scaleStrategyPortrait: ['fit-to-screen', 1920, 1080],
             scaleStrategyLandscape: ['fit-to-screen', 1920, 1080],
             childs: [
                 {
                     type: 'sprite',
-                    image: 'bonus_pick_background'
+                    image: 'bonus_freespin_fgbackgroundeffect'
                 },
                 {
-                    name: 'pick jackpot container', position: [740, -60], childs: [
-                        {
-                            name: 'pick jackpot_4', position: [0, -(2 - 0) * 177], drawed: 0, childs: [
-                                { name: 'pick jackpot_4 bg', position: [0, 50], type: 'sprite', image: 'jackpotbg' },
-                                { name: 'pick jackpot_4 icon', position: [-84, 0], type: 'sprite', image: 'jpearth' },
-                                { name: 'pick jackpot_4 label', position: [-80, -65], scale: 0.5, type: 'sprite', image: 'jpearthheader' },
-                                { type: 'sprite', image: 'splat', position: [120, 0] },
-                                { //###### bitmap-font  used !!!!!
-                                    name: 'pick jackpot_4 text', anchor: [1, 0.5], position: [30, 50], type: 'bitmap-text', text: '900', scale: 0.6,
-                                    styles: { align: 'right', font: { name: 'font', size: 90 }, tint: 0xFFFFFF }
-                                },
-                                { position: [120, 0], childs: [
-                                        { type: 'sprite', image: 'last', position: [0, -70] },
-                                        {
-                                            name: 'pick jackpot_4 value',  type: 'bitmap-text', text: '18', position: [0, 20],
-                                            styles: { align: 'right', font: { name: 'red', size: 70 }, tint: 0xFFFFFF }
-                                        },
-                                    ]
-                                },
-                                { name: 'pick jackpot_4 glow', position: [-84, 0], type: 'sprite', image: 'jpearthglow', alpha: 0 },
-                            ]
-                        },
-                        {
-                            name: 'pick jackpot_3', position: [0, -(2 - 1) * 177], drawed: 0, childs: [
-                                { name: 'pick jackpot_3 bg', position: [0, 50], type: 'sprite', image: 'jackpotbg' },
-                                { name: 'pick jackpot_3 icon', position: [-84, 0], type: 'sprite', image: 'jpfire' },
-                                { name: 'pick jackpot_3 label', position: [-80, -65], scale: 0.5, type: 'sprite', image: 'jpfireheader' },
-                                { type: 'sprite', image: 'splat', position: [120, 0] },
-                                { //###### bitmap-font  used !!!!!
-                                    name: 'pick jackpot_3 text', anchor: [1, 0.5], position: [30, 50], type: 'bitmap-text', text: '900', scale: 0.6,
-                                    styles: { align: 'right', font: { name: 'font', size: 90 }, tint: 0xFFFFFF }
-                                },
-                                { position: [120, 0], childs: [
-                                        { type: 'sprite', image: 'last', position: [0, -70] },
-                                        {
-                                            name: 'pick jackpot_3 value',  type: 'bitmap-text', text: '18', position: [0, 20],
-                                            styles: { align: 'right', font: { name: 'red', size: 70 }, tint: 0xFFFFFF }
-                                        },
-                                    ]
-                                },
-                                { name: 'pick jackpot_3 glow', position: [-84, 0], type: 'sprite', image: 'jjpfireglow', alpha: 0 },
-                            ]
-                        },
-                        {
-                            name: 'pick jackpot_2', position: [0, -(2 - 2) * 177], drawed: 0, childs: [
-                                { name: 'pick jackpot_2 bg', position: [0, 50], type: 'sprite', image: 'jackpotbg' },
-                                { name: 'pick jackpot_2 icon', position: [-84, 0], type: 'sprite', image: 'jpwater' },
-                                { name: 'pick jackpot_2 label', position: [-80, -65], scale: 0.5, type: 'sprite', image: 'jpwaterheader' },
-                                { type: 'sprite', image: 'splat', position: [120, 0] },
-                                { //###### bitmap-font  used !!!!!
-                                    name: 'pick jackpot_2 text', anchor: [1, 0.5], position: [30, 50], type: 'bitmap-text', text: '900', scale: 0.6,
-                                    styles: { align: 'right', font: { name: 'font', size: 90 }, tint: 0xFFFFFF }
-                                },
-                                { position: [120, 0], childs: [
-                                        { type: 'sprite', image: 'last', position: [0, -70] },
-                                        {
-                                            name: 'pick jackpot_2 value',  type: 'bitmap-text', text: '18', position: [0, 20],
-                                            styles: { align: 'right', font: { name: 'red', size: 70 }, tint: 0xFFFFFF }
-                                        },
-                                    ]
-                                },
-                                { name: 'pick jackpot_2 glow', position: [-84, 0], type: 'sprite', image: 'jpwaterglow', alpha: 0 },
-                            ]
-                        },
-                        {
-                            name: 'pick jackpot_1', position: [0, -(2 - 3) * 177], drawed: 0, childs: [
-                                { name: 'pick jackpot_1 bg', position: [0, 50], type: 'sprite', image: 'jackpotbg' },
-                                { name: 'pick jackpot_1 icon', position: [-84, 0], type: 'sprite', image: 'jpthunder' },
-                                { name: 'pick jackpot_1 label', position: [-80, -65], scale: 0.5, type: 'sprite', image: 'jpthunderheader' },
-                                { type: 'sprite', image: 'splat', position: [120, 0] },
-                                { //###### bitmap-font  used !!!!!
-                                    name: 'pick jackpot_1 text', anchor: [1, 0.5], position: [30, 50], type: 'bitmap-text', text: '900', scale: 0.6,
-                                    styles: { align: 'right', font: { name: 'font', size: 90 }, tint: 0xFFFFFF }
-                                },
-                                { position: [120, 0], childs: [
-                                        { type: 'sprite', image: 'last', position: [0, -70] },
-                                        {
-                                            name: 'pick jackpot_1 value',  type: 'bitmap-text', text: '18', position: [0, 20],
-                                            styles: { align: 'right', font: { name: 'red', size: 70 }, tint: 0xFFFFFF }
-                                        },
-                                    ]
-                                },
-                                { name: 'pick jackpot_1 glow', position: [-84, 0], type: 'sprite', image: 'jpthunderglow', alpha: 0 },
-                            ]
-                        },
-                        {
-                            name: 'pick jackpot_0', position: [0, -(2 - 4) * 177], drawed: 0, childs: [
-                                { name: 'pick jackpot_0 bg', position: [0, 50], type: 'sprite', image: 'jackpotbg' },
-                                { name: 'pick jackpot_0 icon', position: [-84, 0], type: 'sprite', image: 'jpwind' },
-                                { name: 'pick jackpot_0 label', position: [-80, -65], scale: 0.5, type: 'sprite', image: 'jpwindheader' },
-                                { type: 'sprite', image: 'splat', position: [120, 0] },
-                                { //###### bitmap-font  used !!!!!
-                                    name: 'pick jackpot_0 text', anchor: [1, 0.5], position: [30, 50], type: 'bitmap-text', text: '900', scale: 0.6,
-                                    styles: { align: 'right', font: { name: 'font', size: 90 }, tint: 0xFFFFFF }
-                                },
-                                { position: [120, 0], childs: [
-                                        { type: 'sprite', image: 'last', position: [0, -70] },
-                                        {
-                                            name: 'pick jackpot_0 value',  type: 'bitmap-text', text: '18', position: [0, 20],
-                                            styles: { align: 'right', font: { name: 'red', size: 70 }, tint: 0xFFFFFF }
-                                        },
-                                    ]
-                                },
-                                { name: 'pick jackpot_0 glow', position: [-84, 0], type: 'sprite', image: 'jpwindglow', alpha: 0 },
-                            ]
-                        },
-                    ]
+                    position: [-800, -250],
+                    scale: 0.75,
+                    type: 'sprite',
+                    image: 'bonus_freespin_bannerflair'
                 },
                 {
-                    position: [300, -450],
-                    childs: [
-                        {
-                            type: 'sprite',
-                            position: [-128, 20],
-                            scale: 0.51,
-                            image: 'bonus_pick_textremaining'
-                        },
-                        {
-                            type: 'sprite',
-                            position: [-205, -40],
-                            scale: 0.35,
-                            image: 'bonus_freespin_freetext'
-                        },
-                        {
-                            type: 'sprite',
-                            position: [-45, -40],
-                            scale: 0.35,
-                            image: 'bonus_freespin_gametext'
-                        },
-                    ]
+                    position: [400, -250],
+                    scale: [-0.75, 0.75],
+                    type: 'sprite',
+                    image: 'bonus_freespin_bannerflair'
                 },
                 {
-                    name: 'pick remaining text',
+                    type: 'sprite',
+                    position: [-180, -300],
+                    image: 'bonus_freespin_congratstext'
+                },
+                {
+                    type: 'sprite',
+                    position: [-180, -150],
+                    scale: 0.7,
+                    image: 'bonus_freespin_wontext'
+                },
+                {
+                    name: 'freespinwon value',
                     type: 'bitmap-text',
-                    text: '0',
-                    position: [400, -485],
-                    styles: {
-                        align: 'right',
-                        font: {
-                            name: 'blue',
-                            size: 75
-                        },
-                        tint: 0xFFFFFF
-                    }
+                    text: '30',
+                    position: [-200, 0],
+                    styles: { align: 'right', font: { name: 'blue', size: 70 }, tint: 0xFFFFFF }
                 },
                 {
-                    name: 'pick item container',
-                    visible: false,
-                    childs: [
-                        {
-                            position: [0, -200],
-                            childs: [
-                                {
-                                    name: 'pick brown item 1',
-                                    type: 'sprite',
-                                    image: 'bonus_pick_pickbrown',
-                                    position: [-715, 0],
-                                    childs: [
-                                        {
-                                            name: 'pick brown item 1 pick',
-                                            type: 'sprite',
-                                            position: [0, 20],
-                                            image: 'bonus_pick_texttouch'
-                                        }
-                                    ]
-                                },
-                                {
-                                    type: 'sprite',
-                                    image: 'bonus_pick_pickgreen',
-                                    position: [-440, 0]
-                                },
-                                {
-                                    type: 'sprite',
-                                    image: 'bonus_pick_pickred',
-                                    position: [-165, 0]
-                                },
-                                {
-                                    type: 'sprite',
-                                    image: 'bonus_pick_pickblack',
-                                    position: [110, 0]
-                                },
-                                {
-                                    type: 'sprite',
-                                    image: 'bonus_pick_pickblue',
-                                    position: [385, 0]
-                                },
-                            ]
-                        },
-                        {
-                            position: [-100, 200],
-                            childs: [
-                                {
-                                    type: 'sprite',
-                                    image: 'bonus_pick_pickbrown',
-                                    position: [-715, 0]
-                                },
-                                {
-                                    type: 'sprite',
-                                    image: 'bonus_pick_pickgreen',
-                                    position: [-440, 0]
-                                },
-                                {
-                                    type: 'sprite',
-                                    image: 'bonus_pick_pickred',
-                                    position: [-165, 0]
-                                },
-                                {
-                                    type: 'sprite',
-                                    image: 'bonus_pick_pickblack',
-                                    position: [110, 0]
-                                },
-                                {
-                                    type: 'sprite',
-                                    image: 'bonus_pick_pickblue',
-                                    position: [385, 0]
-                                },
-                            ]
-                        },
-                    ]
+                    type: 'sprite',
+                    image: 'bonus_freespin_freetext',
+                    scale: 0.7,
+                    position: [-400, 180]
                 },
                 {
-                    name: 'pick ready labels',
+                    type: 'sprite',
+                    image: 'bonus_freespin_gametext',
+                    scale: 0.7,
+                    position: [-50, 180]
+                },
+            ]
+        },
+        {
+            name: 'FreespinEndAnimationContainer',
+            scaleStrategyPortrait: ['fit-to-screen', 1920, 1080],
+            scaleStrategyLandscape: ['fit-to-screen', 1920, 1080],
+            childs: [
+                {
+                    name: 'jackpotWonContainer',
                     childs: [
                         {
-                            name: 'pick pickscroll text',
-                            type: 'sprite',
-                            image: 'bonus_pick_textpick',
-                            position: [-100, -200]
-                        },
-                        {
-                            name: 'pick until text',
-                            childs: [
-                                {
-                                    type: 'sprite',
-                                    position: [-600, 0],
-                                    image: 'bonus_pick_textuntil'
-                                },
-                                {
-                                    type: 'sprite',
-                                    position: [-100, 0],
-                                    image: 'bonus_freespin_freetext'
-                                },
-                                {
-                                    type: 'sprite',
-                                    position: [360, 0],
-                                    image: 'bonus_freespin_gametext'
-                                },
-                            ]
-                        },
-                        {
-                            name: 'pick given text',
-                            type: 'sprite',
-                            image: 'bonus_pick_textgiven',
-                            position: [-100, 200]
+                            name: ''
                         }
                     ]
-                },
+                }
             ]
         },
         {
@@ -1650,6 +2076,8 @@ App.Gameplay = new Screen({
                     this.denom_value_list = array_server.response.arrDenomValue;
                     // this.jackpot_value_list = array_server.response.arrJackpotValue;  //Special in Gold.
                     this.jackpot_value_list = [300, 450, 600, 750, 900];
+                    this.pick_jackpot_value_list = [300, 450, 600, 750, 900];
+                    this.pick_jackpot_count_list = [18, 18, 18, 18, 18];
                     this.bet = {
                         amount: this.denom_value_list[0] * this.line_value_list[0] * this.betperline_value_list[0],
                         drawed: this.denom_value_list[0],
@@ -1666,6 +2094,8 @@ App.Gameplay = new Screen({
                 this.betperline_value_list = [1, 2, 3, 4, 5];
                 this.denom_value_list = [1, 2, 3, 5, 7, 10];
                 this.jackpot_value_list = [300, 450, 600, 750, 900];
+                this.pick_jackpot_value_list = [300, 450, 600, 750, 900];
+                this.pick_jackpot_count_list = [18, 18, 18, 18, 18];
                 this.bet = {
                     amount: this.denom_value_list[0] * this.line_value_list[0] * this.betperline_value_list[0],
                     drawed: this.denom_value_list[0] * this.line_value_list[0] * this.betperline_value_list[0],
@@ -1930,10 +2360,10 @@ App.Gameplay = new Screen({
         },
 
         'Gameplay resize': function () {
-            this.helpArrowsSetPosition();
-            this.refreshHelpValue();
+            // this.refreshHelpValue();
             this.refreshPanelValues();
-            /*
+            /*this.helpArrowsSetPosition();
+            /!*
             if (App.IsPortrait) {
                 this.helpPageVisabilityFlag = false;
                 this['info container ' + this.helpPageIndex].visible = true;
@@ -1943,7 +2373,7 @@ App.Gameplay = new Screen({
                 this['MainContainer'].visible = 1;
                 this['ControlPanelContainer'].visible = 1;
             }
-            */
+            *!/
             if (App.IsLandscape) {
                 if (this.helpPageVisabilityFlag) {
                     this['info container ' + this.helpPageIndex].visible = 1;
@@ -1956,7 +2386,7 @@ App.Gameplay = new Screen({
             }
 
             if(this.automenu_mode === true)
-                this['AutoMenuContainer'].visible = true;
+                this['AutoMenuContainer'].visible = true;*/
         },
 
         'Gameplay showed': function () {
@@ -2051,6 +2481,23 @@ App.Gameplay = new Screen({
         'Gameplay help indicator down': function(container, e) {
             this.helpPageIndex = this[container.name].step;
             this.refreshHelpIndicator();
+        },
+
+        'Gameplay pick item down': function(container, e) {
+            if(this.pickState !== 'ready') return;
+            let types = ['begin', 'remaining', 'baseup'];
+            let values = ['10', '5', 'fire'];
+            values[2] = this.jackpotList[Math.floor(Math.random() * this.jackpotList.length)];
+            this.setActiveTouchItems(false);
+            let itemNumber = container.name.split(' ')[2];
+            this[container.name + ' back'].visible = false;
+            this[container.name + ' glow'].visible = true;
+            this[container.name + ' glow'].gotoAndPlay(0);
+            setTimeout(() => {
+                this[container.name].visible = false;
+                let randIdx = Math.floor(Math.random() * types.length);
+                this.showPickOpenContainer(container.color, types[randIdx], values[randIdx]);
+            }, 300);
         },
 
         'Gameplay button over': function (container, e) { this.handleButtonOver(container, e); },
@@ -2231,10 +2678,22 @@ App.Gameplay = new Screen({
         var self = this;
         this.spinCombination = null;
         this.auto_mode = (this.current_auto_amount > 0);
-        if(this.auto_mode == true) {
+        if(this.auto_mode === true) {
+            this.setButtonEnable('maxbet button', false);
+            this.setButtonEnable('autospin button', false);
+            this.setButtonEnable('betperline bar', false);
+            this.setButtonEnable('denom bar', false);
+            this['freespin count text'].text = this.current_auto_amount;
             this.current_auto_amount--;
-            if(this.current_auto_amount == 0)
+            if(this.current_auto_amount === 0){
+                if(this.isfreespin)
+                    this.freespinEnd = true;
                 this.auto_mode = false;
+                this.setButtonEnable('maxbet button', true);
+                this.setButtonEnable('autospin button', true);
+                this.setButtonEnable('betperline bar', true);
+                this.setButtonEnable('denom bar', true);
+            }
         }
         this.refreshPanelValues();
 
@@ -2439,7 +2898,11 @@ App.Gameplay = new Screen({
             }
         //end of replace drop movies
 
-        if(this.isfreespin) {
+        if(this.isfreespin && this.total_freespin_amount === 0) {
+            if(this.freespinEnd) {
+                this.endFreespinAnimation();
+                this.freespinEnd = false;
+            }
             setTimeout(() => {
                 this.pickContainerAnimation();
             }, 5000);
@@ -2897,7 +3360,15 @@ App.Gameplay = new Screen({
     pickContainerAnimation: function () {
         this.startFlashWhite();
         setTimeout(() => {
+            this.updatePickJackpotValue(true);
+            this.total_freespin_amount = 0;
+            this.updateRemainingText();
             this['PickContainer'].visible = true;
+            this['jackpot container'].visible = false;
+            this['pick jackpot container'].visible = true;
+            for(let i = 1; i < 11; i++) {
+                this[`pick item ${i}`].visible = true;
+            }
             this.tween({
                 set: [
                     ['visible', 1],
@@ -2909,6 +3380,9 @@ App.Gameplay = new Screen({
             }, 'pick item container');
             setTimeout(() => {
                 this.hideLabelAnimation();
+                setTimeout(() => {
+                    this.setActiveTouchItems(true);
+                }, 900);
             }, 4000);
         }, 500);
     },
@@ -2934,6 +3408,250 @@ App.Gameplay = new Screen({
                 }
             }, 'pick given text');
         }, 300);
+    },
+
+    endFreespinAnimation: function() {
+
+    },
+
+    setActiveTouchItems: function(active = true) {
+        let pickItems = [];
+        for(let i = 1; i < 11; i ++) {
+            pickItems.push(`pick item ${i} touch`)
+        }
+        if(active) {
+            this.pickState = 'ready';
+            this.tween({
+                set: [
+                    ['visible', 1],
+                    ['scale', 0.9]
+                ],
+                to: ['scale', 1.1, 500],
+                next: {
+                    to: ['scale', 0.9, 500]
+                }
+            }, pickItems);
+            this.touchInterval = setInterval(() => {
+                this.tween({
+                    set: [
+                        ['visible', 1],
+                        ['scale', 0.9]
+                    ],
+                    to: ['scale', 1.1, 500],
+                    next: {
+                        to: ['scale', 0.9, 500]
+                    }
+                }, pickItems);
+            }, 1000);
+        } else {
+            this.pickState = 'not';
+            clearInterval(this.touchInterval);
+            this.tween({
+                set: ['visible', 0]
+            }, pickItems);
+        }
+    },
+
+    showPickOpenContainer: function(color, type, value) {
+        this['pick open back'].texture = this.getTexture(`bonus_pick_pick${color}open`);
+        switch (type) {
+            case 'begin':
+                this.total_freespin_amount += 10;
+                break;
+            case 'baseup':
+                this['pick open baseup sprite'].texture = this.getTexture(`jp${value}`);
+                this['pick open baseup header'].texture = this.getTexture(`jp${value}header`);
+                break;
+            case 'remaining':
+                this.total_freespin_amount += 5;
+                break;
+        }
+        this.tween({
+            set: [
+                ['visible', 1],
+                ['scale', 0.4]
+            ],
+            to: [
+                'scale', 1, 700, 100, Power1.easeOut
+            ]
+        }, 'pick open back');
+        setTimeout(() => {
+            this.tween({
+                set: [
+                    ['visible', 1],
+                    ['alpha', 0]
+                ],
+                to: ['alpha', 1, 600]
+            }, `pick open ${type} container`);
+            if(type === 'begin')
+                this['pick open back'].texture = this.getTexture(`bonus_pick_pickgoldopen`);
+            this.tween({
+                to: [
+                    'scale', 0.9, 200, 100, Power1.easeOut
+                ],
+                next: {
+                    to: [
+                        'scale', 1, 200, 100, Power1.easeOut
+                    ],
+                }
+            }, 'pick open container');
+            setTimeout(() => {
+                switch (type) {
+                    case 'begin':
+                        this['pick item glow'].texture = this.getTexture(`jpwaterglow`);
+                        let xTarget = this.getAbsolutePos('pick open begin value');
+                        let yTarget = this.getAbsolutePos('pick remaining text');
+                        this.glowMoveAnimation(xTarget, yTarget, 500, 'pick item glow');
+                        setTimeout(() => {
+                            this.updateRemainingText();
+                        }, 500);
+                        break;
+                    case 'baseup':
+                        this['pick item glow'].texture = this.getTexture(`jp${value}glow`);
+                        let baseUpx = this.getAbsolutePos('pick open baseup sprite');
+                        let baseUpy = this.getAbsolutePos(`pick jackpot ${value} icon`);
+                        this.glowMoveAnimation(baseUpx, baseUpy, 500, 'pick item glow');
+                        setTimeout(() => {
+                            this.startflashAnimation(`pick jackpot ${value} icon`);
+                            this.updatePickValue(value);
+                            this.updatePickJackpotValue(false);
+                        }, 500);
+                        break;
+                    case 'remaining':
+                        this['pick item glow'].texture = this.getTexture(`jpwaterglow`);
+                        let remainingx = this.getAbsolutePos('pick open remaining text');
+                        let remainingy = this.getAbsolutePos(`pick remaining text`);
+                        this.glowMoveAnimation(remainingx, remainingy, 500, 'pick item glow');
+                        setTimeout(() => {
+                            this.updateRemainingText();
+                        }, 500);
+                        break;
+                }
+            }, 600);
+        }, 700);
+        setTimeout(() => {
+            if(type === 'begin') {
+                this.exitPickcontainerAnimation();
+                this[`pick open ${type} container`].visible = false;
+                this['pick open back'].visible = false;
+                this.isfreespin = true;
+                this.current_auto_amount = this.total_freespin_amount;
+                this.setButtonEnable('maxbet button', false);
+                this.setButtonEnable('autospin button', false);
+                this.setButtonEnable('betperline bar', false);
+                this.setButtonEnable('denom bar', false);
+            } else {
+                this.setActiveTouchItems(true);
+                this[`pick open ${type} container`].visible = false;
+                this['pick open back'].visible = false;
+            }
+        }, 5000);
+    },
+
+    updatePickValue: function(value) {
+        let index = this.jackpotList.indexOf(value);
+        this.pick_jackpot_value_list[index] += 150;
+        this.pick_jackpot_count_list[index] --;
+    },
+
+    updatePickJackpotValue: function(initial = true) {
+        if(initial) {
+            for (let i = 0; i < 5; i++) {
+                this.pick_jackpot_value_list[i] = this.jackpot_value_list[i] * this.betperlines.value;
+                this[`pick jackpot ${this.jackpotList[i]} value`].text = this.pick_jackpot_count_list[i];
+                this[`pick jackpot ${this.jackpotList[i]} text`].text = this.pick_jackpot_value_list[i];
+            }
+            this.pick_jackpot_count_list = [18, 18, 18, 18, 18];
+        } else {
+            for (let i = 0; i < 5; i++) {
+                this[`pick jackpot ${this.jackpotList[i]} text`].text = this.pick_jackpot_value_list[i];
+                this[`pick jackpot ${this.jackpotList[i]} value`].text = this.pick_jackpot_count_list[i];
+            }
+        }
+    },
+
+    startflashAnimation: function(target) {
+        this.tween({
+            to: ['scale', 0.9, 250],
+            next: {
+                to: ['scale', 1, 250]
+            }
+        }, target)
+    },
+
+    updateRemainingText: function() {
+        this.tween({
+            set: ['drawed', this['pick remaining text'].drawed],
+            to: ['drawed', this.total_freespin_amount, 500, 100, Expo.easeOut],
+            update: () => { this['pick remaining text'].text = this.numberToString(Math.trunc(this['pick remaining text'].drawed));}
+        }, 'pick remaining text');
+        this['freespinwon value'].text = this.total_freespin_amount.toString();
+    },
+
+    getAbsolutePos: function(target) {
+        let x = 0, y = 0;
+        let loop = this[target];
+        while(1) {
+            x += loop.x;
+            y += loop.y;
+            if(loop.parent === null) {
+                break;
+            } else {
+                loop = loop.parent;
+            }
+        }
+        return {x: x - 1920 / 2, y: y - 1080 / 2 + this[target].height / 2};
+    },
+
+    glowMoveAnimation: function(xTarget, yTarget, timeout, target) {
+        let x1 = xTarget.x;
+        let y1 = xTarget.y;
+        let x2 = yTarget.x;
+        let y2 = yTarget.y;
+        this.tween({
+            set: [
+                ['visible', 1],
+                ['x', x1],
+                ['y', y1]
+            ],
+            to: [
+                ['x', x2, timeout],
+                ['y', y2, timeout]
+            ],
+            next: {
+                set: ['visible', 0]
+            }
+        }, target);
+    },
+
+    exitPickcontainerAnimation: function() {
+        this.startFlashWhite();
+        setTimeout(() => {
+            this['PickContainer'].visible = false;
+            this['FreespinWonContainer'].visible = true;
+            this.setFreespinMode(true);
+            this.tween({
+                set: ['alpha', 1],
+                to: ['alpha', 0.8, 1500]
+            }, 'FreespinWonContainer');
+            setTimeout(() => {
+                this.tween({
+                    to: ['alpha', 0, 500]
+                }, 'FreespinWonContainer');
+            }, 3000);
+        }, 500);
+    },
+
+    setFreespinMode: function(freeMode = true) {
+        if(freeMode) {
+            this['30lines'].texture = this.getTexture("bonus30lines");
+            this['background'].texture = this.getTexture('bonusBackground');
+            this['reelsFrameBg'].texture = this.getTexture('bonusReels');
+        } else {
+            this['30lines'].texture = this.getTexture("30lines");
+            this['background'].texture = this.getTexture('background');
+            this['reelsFrameBg'].texture = this.getTexture('reels');
+        }
     },
 
     completeFreespin: function () {
@@ -3137,13 +3855,13 @@ App.Gameplay = new Screen({
         },
 //###### Special button handlers...
         buttonHandlerMaxBet:function(container, name){
-            if (this.state !== 'ready') return;
+            if (this.state !== 'ready' || this['maxbet button'].texture === this.getTexture("Max_ButtonDeactivate")) return;
             SoundManager.playSound('panel_max');
             this.stopWinAnimation();
             this.setBetAmountValues(this.lines.step, this.betperline_value_list.length, this.denomes.step);
         },
         buttonHandlerAutoSpin: function (container, name) {
-            if (this.state !== 'ready') return;
+            if (this.state !== 'ready' || this['autospin button'].texture === this.getTexture("Auto_ButtonDeactivate")) return;
             this.is_win_anim = false;
             SoundManager.playSound('panel_auto');
             this.automenu_mode = this.automenu_mode !== true;
@@ -3172,6 +3890,7 @@ App.Gameplay = new Screen({
         },
 
         buttonHandlerStopAutoSpin: function (container, name) {
+            if(this.isfreespin) return;
             SoundManager.playSound('panel_auto');
             this.auto_mode = false;
             this.current_auto_amount = 0;
@@ -3237,6 +3956,20 @@ App.Gameplay = new Screen({
             this['MenuContainer'].visible = false;
         },
 
+        setButtonEnable: function(target, enable = true) {
+            let targetNames = ['maxbet button', 'autospin button', 'betperline bar', 'denom bar'];
+            let activeImageName = ['Max_Button', 'Auto_Button', 'BetPerDenom_Button', 'BetPerDenom_Button'];
+            for(let i = 0; i < targetNames.length; i++) {
+                if(targetNames.indexOf(target) !== -1){
+                    if(enable) {
+                        this[target].texture = this.getTexture(activeImageName[targetNames.indexOf(target)]);
+                    } else {
+                        this[target].texture = this.getTexture(activeImageName[targetNames.indexOf(target)] + "Deactivate");
+                    }
+                }
+            }
+        },
+
         showHelpPage: function (index) {
             this['info container ' + index].visible = true;
             this['info container ' + index].alpha = 1;
@@ -3265,7 +3998,7 @@ App.Gameplay = new Screen({
         },
 
         buttonHandleBetPerLineUpDown: function (bUp, container, name) {
-            if (this.state !== 'ready') return;
+            if (this.state !== 'ready' || this['betperline bar'].texture === this.getTexture("BetPerDenom_ButtonDeactivate")) return;
             this.is_win_anim = false;
             var cur_step = this.betperlines.step;
             if (bUp == true) {
@@ -3278,7 +4011,7 @@ App.Gameplay = new Screen({
             SoundManager.playSound('bet_' + cur_step);
         },
         buttonHandleDenomUpDown: function (bUp, container, name) {
-            if (this.state !== 'ready') return;
+            if (this.state !== 'ready' || this['denom bar'].texture === this.getTexture("BetPerDenom_ButtonDeactivate")) return;
             this.is_win_anim = false;
             var cur_step = this.denomes.step;
             if (bUp == true) {
@@ -3307,7 +4040,7 @@ App.Gameplay = new Screen({
                 this.bet.amount = betAmount;
 
                 this.refreshPanelValues();
-                this.refreshHelpValue();
+                // this.refreshHelpValue();
             },
 
             refreshPanelValues: function() {
@@ -3324,10 +4057,11 @@ App.Gameplay = new Screen({
                     this.animFieldPoints('jackpot_' + i, this.jackpot_value_list[i]*this.betperlines.value);
                 }
 
-                this['autospin button text'].text = (this.current_auto_amount > 0) ? this.current_auto_amount.toString() : 'AUTO';
+                this['autospin button text'].text = (this.current_auto_amount > 0 && !this.isfreespin) ? this.current_auto_amount.toString() : 'AUTO';
 
                 // visible
-                this['stopautospin button'].visible = this.auto_mode;
+                this['stopautospin button'].visible = this.auto_mode && !this.isfreespin;
+                this['startfreespin button'].visible = this.auto_mode && this.isfreespin;
                 this['startautospin button'].visible = (this.current_auto_amount > 0) && (!this.auto_mode);
 
                 // enalble / disable
@@ -3362,12 +4096,6 @@ App.Gameplay = new Screen({
                 }, name);
             },
 
-            refreshHelpValue: function () {
-                for (let i = 1; i < 31; i++) {
-                    // this['info container 1 text ' + i].text = "";
-                    this['info container 1 text ' + i].text = parseInt(this.base_amount[i - 1]) * parseInt(this.bet.step);
-                }
-            },
     //####### Draw ##### //
             showWinLogo:function() {
                 //if(this.is_winlogo_visible) return;
@@ -3386,6 +4114,7 @@ App.Gameplay = new Screen({
 
             freespin_count: 0,
             isfreespin: false,
+            freespinEnd: false,
             freespin_index: 0,
             total_freespin_amount: 0,
 
@@ -3393,11 +4122,12 @@ App.Gameplay = new Screen({
             server_initMatrix: [],
             server_arrRetVal: [],
             server_scatters: [],
-            base_amount: [100, 25, 7, 20, 10, 5, 10, 5, 3, 10, 5, 3, 500, 50, 10, 50, 25, 5, 8, 4, 2, 8, 4, 2, 8, 4, 2, 5, 2, 1],
             server_url: "http://localhost/pixi/cui/server.json",
             server_win_amount: { value:0, drawed:0},
             session_id: 0,
             first_reel: 0,
+
+            jackpotList: ['wind', 'thunder', 'water', 'fire', 'earth'],
 
             back_sound: null,
             finish_sound : false,
@@ -3424,8 +4154,7 @@ App.Gameplay = new Screen({
 
             getFakeServerData: function () {
                 var rand = _.random(0, 3);
-                var rand = 3;
-                console.log(rand)
+                var rand = this.isfreespin ? 2 : 3;
                 switch (rand) {
                     case 1: //Win 2 - Q, K, Wild: Q or K will blank, Wild is movie-clip
                         var response = {"error":"0","response":{"initCards":[[6,4,3],[3,1,4],[12,6,7],[4,1,9],[3,3,4]],"arrRetVal":[

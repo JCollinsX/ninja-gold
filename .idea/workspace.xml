@@ -2,26 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dd7d46ce-6e1c-4eaa-84c4-b489fb97a84a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Fonts/blue.fnt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Fonts/red.fnt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Images/helpscreens/page1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Images/helpscreens/page2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Images/helpscreens/page3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Images/helpscreens/page4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Images/helpscreens/page5.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Images/helpscreens/page6.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Images/helpscreens/page7.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Images/helpscreens/page8.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Images/helpscreens/page9.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/Libs/Pixi.Classes/Game.Pixi.js" beforeDir="false" afterPath="$PROJECT_DIR$/App/Libs/Pixi.Classes/Game.Pixi.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/Libs/Pixi/4.7.1-ga-ready/pixi.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/App/Libs/Pixi/4.7.1-ga-ready/pixi.js.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/App/Screens/Gameplay.js" beforeDir="false" afterPath="$PROJECT_DIR$/App/Screens/Gameplay.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/Setting.js" beforeDir="false" afterPath="$PROJECT_DIR$/App/Setting.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Fonts/blue.json" beforeDir="false" afterPath="$PROJECT_DIR$/Fonts/blue.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Fonts/green.json" beforeDir="false" afterPath="$PROJECT_DIR$/Fonts/green.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Fonts/red.json" beforeDir="false" afterPath="$PROJECT_DIR$/Fonts/red.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Fonts/blue.fnt" beforeDir="false" afterPath="$PROJECT_DIR$/Fonts/blue.fnt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,6 +59,11 @@
       <workItem from="1584375059330" duration="19266000" />
       <workItem from="1584429037220" duration="9260000" />
       <workItem from="1584457606554" duration="18548000" />
+      <workItem from="1584608882566" duration="11617000" />
+      <workItem from="1584630840824" duration="12289000" />
+      <workItem from="1584686935067" duration="2322000" />
+      <workItem from="1584700452149" duration="599000" />
+      <workItem from="1584717030503" duration="10646000" />
     </task>
     <task id="LOCAL-00001" summary="updated gitignore file">
       <created>1584307555461</created>
@@ -84,40 +72,54 @@
       <option name="project" value="LOCAL" />
       <updated>1584307555461</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="1. help screen added&#10;2. blue and red font added">
+      <created>1584608948662</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1584608948662</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="CHECK_NEW_TODO" value="false" />
     <MESSAGE value="updated gitignore file" />
-    <option name="LAST_COMMIT_MESSAGE" value="updated gitignore file" />
+    <MESSAGE value="1. help screen added&#10;2. blue and red font added" />
+    <option name="LAST_COMMIT_MESSAGE" value="1. help screen added&#10;2. blue and red font added" />
   </component>
   <component name="WindowStateProjectService">
     <state x="724" y="329" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1584474399806">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="724" y="329" key="#com.intellij.fileTypes.FileTypeChooser/1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1584474399806" />
-    <state x="585" y="119" key="CommitChangelistDialog2" timestamp="1584307554678">
+    <state x="585" y="119" key="CommitChangelistDialog2" timestamp="1584608945070">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="585" y="119" key="CommitChangelistDialog2/1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1584307554678" />
-    <state x="552" y="259" key="Vcs.Push.Dialog.v2" timestamp="1584307556677">
+    <state x="585" y="119" key="CommitChangelistDialog2/1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1584608945070" />
+    <state x="552" y="259" key="Vcs.Push.Dialog.v2" timestamp="1584608950905">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="552" y="259" key="Vcs.Push.Dialog.v2/1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1584307556677" />
-    <state x="647" y="156" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1584471803012">
+    <state x="552" y="259" key="Vcs.Push.Dialog.v2/1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1584608950905" />
+    <state x="647" y="156" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1584611151808">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="647" y="156" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1584471803012" />
-    <state x="656" y="257" width="737" height="606" key="find.popup" timestamp="1584479110732">
+    <state x="647" y="156" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1584611151808" />
+    <state x="656" y="257" width="737" height="606" key="find.popup" timestamp="1584733520445">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="656" y="257" width="737" height="606" key="find.popup/1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1584479110732" />
-    <state x="623" y="227" width="672" height="678" key="search.everywhere.popup" timestamp="1584473525346">
+    <state x="656" y="257" width="737" height="606" key="find.popup/1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1584733520445" />
+    <state x="616" y="243" key="run.anything.popup" timestamp="1584612582371">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="623" y="227" width="672" height="678" key="search.everywhere.popup/1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1584473525346" />
+    <state x="616" y="243" key="run.anything.popup/1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1584612582371" />
+    <state x="623" y="227" width="672" height="678" key="search.everywhere.popup" timestamp="1584644333927">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="623" y="227" width="672" height="678" key="search.everywhere.popup/1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1584644333927" />
   </component>
 </project>

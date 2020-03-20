@@ -5,6 +5,7 @@
     <page id="0" file="blue.png"/>
   </pages>
   <chars count="10">
+    <char id="43" x="1" y="1339" width="110" height="116" xoffset="0" yoffset="15" xadvance="110" page="0" chnl="15"/>
     <char id="48" x="1" y="892" width="112" height="148" xoffset="0" yoffset="0" xadvance="112" page="0" chnl="15"/>
     <char id="49" x="1" y="1457" width="79" height="146" xoffset="0" yoffset="0" xadvance="79" page="0" chnl="15"/>
     <char id="50" x="1" y="1191" width="111" height="146" xoffset="0" yoffset="0" xadvance="111" page="0" chnl="15"/>
