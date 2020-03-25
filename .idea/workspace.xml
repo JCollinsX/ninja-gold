@@ -2,9 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dd7d46ce-6e1c-4eaa-84c4-b489fb97a84a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Fonts/green.fnt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/App/Screens/Gameplay.js" beforeDir="false" afterPath="$PROJECT_DIR$/App/Screens/Gameplay.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Fonts/blue.fnt" beforeDir="false" afterPath="$PROJECT_DIR$/Fonts/blue.fnt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/Setting.js" beforeDir="false" afterPath="$PROJECT_DIR$/App/Setting.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,7 +64,13 @@
       <workItem from="1584630840824" duration="12289000" />
       <workItem from="1584686935067" duration="2322000" />
       <workItem from="1584700452149" duration="599000" />
-      <workItem from="1584717030503" duration="10646000" />
+      <workItem from="1584717030503" duration="11310000" />
+      <workItem from="1584791145715" duration="2141000" />
+      <workItem from="1584859430058" duration="17147000" />
+      <workItem from="1584891802783" duration="7257000" />
+      <workItem from="1585077531897" duration="2421000" />
+      <workItem from="1585121633752" duration="2963000" />
+      <workItem from="1585148900541" duration="10279000" />
     </task>
     <task id="LOCAL-00001" summary="updated gitignore file">
       <created>1584307555461</created>
@@ -79,7 +86,14 @@
       <option name="project" value="LOCAL" />
       <updated>1584608948662</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="freespin showing animation completed">
+      <created>1584743742683</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1584743742683</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -90,36 +104,37 @@
     <option name="CHECK_NEW_TODO" value="false" />
     <MESSAGE value="updated gitignore file" />
     <MESSAGE value="1. help screen added&#10;2. blue and red font added" />
-    <option name="LAST_COMMIT_MESSAGE" value="1. help screen added&#10;2. blue and red font added" />
+    <MESSAGE value="freespin showing animation completed" />
+    <option name="LAST_COMMIT_MESSAGE" value="freespin showing animation completed" />
   </component>
   <component name="WindowStateProjectService">
     <state x="724" y="329" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1584474399806">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="724" y="329" key="#com.intellij.fileTypes.FileTypeChooser/1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1584474399806" />
-    <state x="585" y="119" key="CommitChangelistDialog2" timestamp="1584608945070">
+    <state x="585" y="119" key="CommitChangelistDialog2" timestamp="1584743740584">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="585" y="119" key="CommitChangelistDialog2/1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1584608945070" />
-    <state x="552" y="259" key="Vcs.Push.Dialog.v2" timestamp="1584608950905">
+    <state x="585" y="119" key="CommitChangelistDialog2/1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1584743740584" />
+    <state x="552" y="259" key="Vcs.Push.Dialog.v2" timestamp="1584743744504">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="552" y="259" key="Vcs.Push.Dialog.v2/1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1584608950905" />
+    <state x="552" y="259" key="Vcs.Push.Dialog.v2/1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1584743744504" />
     <state x="647" y="156" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1584611151808">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="647" y="156" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1584611151808" />
-    <state x="656" y="257" width="737" height="606" key="find.popup" timestamp="1584733520445">
+    <state x="656" y="257" width="737" height="606" key="find.popup" timestamp="1585173373234">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="656" y="257" width="737" height="606" key="find.popup/1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1584733520445" />
+    <state x="656" y="257" width="737" height="606" key="find.popup/1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1585173373234" />
     <state x="616" y="243" key="run.anything.popup" timestamp="1584612582371">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="616" y="243" key="run.anything.popup/1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1584612582371" />
-    <state x="623" y="227" width="672" height="678" key="search.everywhere.popup" timestamp="1584644333927">
+    <state x="623" y="227" width="672" height="678" key="search.everywhere.popup" timestamp="1584875957137">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="623" y="227" width="672" height="678" key="search.everywhere.popup/1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1584644333927" />
+    <state x="623" y="227" width="672" height="678" key="search.everywhere.popup/1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1584875957137" />
   </component>
 </project>

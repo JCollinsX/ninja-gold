@@ -239,7 +239,7 @@
         // ########## Font ###########
         "font": { "type": "bitmap-font", "url": "Fonts/font.fnt" },
         "blue": { "type": "bitmap-font", "url": "Fonts/blue.fnt" },
-        // "green": { "type": "bitmap-font", "url": "Fonts/green.json" },
+        "green": { "type": "bitmap-font", "url": "Fonts/green.fnt" },
         "red": { "type": "bitmap-font", "url": "Fonts/red.fnt" },
 
         // ########### Texture ############

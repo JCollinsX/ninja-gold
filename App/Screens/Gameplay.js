@@ -35,6 +35,7 @@ App.Gameplay = new Screen({
                         { name: 'game board symbols highlighted container', position: [0, -64], childs: [] },
                         { name: 'game board symbols borders', position: [0, -64], childs: [] },
                         { name: 'game board symbols reelanticipation', position: [0, -64], childs: [] },
+                        { name: 'game board symbols glow container', position: [0, -64], childs: [] },
                         {
                             name: 'win-logo container', position: [-290, 380], alpha:0,
                             childs: [
@@ -46,7 +47,7 @@ App.Gameplay = new Screen({
                                     styles: { align: 'Left', fontFamily: 'Arial', fontwegiht: 600, fontSize: '34px',  padding: 5, fill: 0xffffff } },
                             ]
                         },
-                    { name:'logo', position:[0, -494], scale:[1, 1], type: 'sprite', image:'logo',  /*event:'screen'*/ },
+                        { name:'logo', position:[0, -494], scale:[1, 1], type: 'sprite', image:'logo',  /*event:'screen'*/ },
                         {
                             name: 'freespin info', position: [0, 0], scale: [1.3, 1.3],
                             type: 'sprite', image: 'reTrig.png', visible: false,
@@ -141,6 +142,10 @@ App.Gameplay = new Screen({
                                         { name: 'spin button', button: 'button', type: 'sprite', image: 'Spin_Button' },
                                         { name: 'spin button glow', type: 'sprite', image: 'Spin_ButtonPress', alpha: 0 },
                                         { name: 'spin button inactive', type: 'sprite', image: 'Spin_ButtonOut', alpha: 0 },
+                                        {
+                                            name: 'spin button text1', type: 'text', text: 'Press\nTo\nStart', visible: false,
+                                            styles: { align: 'center', fontFamily: 'Arial', fontSize: '25px', padding: 5, fill: 0xffffff, fontWeight: 'bold' },
+                                        }
                                     ]
                                 },
                                 {
@@ -1018,18 +1023,22 @@ App.Gameplay = new Screen({
                                 { name: 'pick jackpot earth bg', position: [0, 50], type: 'sprite', image: 'jackpotbg' },
                                 { name: 'pick jackpot earth icon', position: [-84, 0], type: 'sprite', image: 'jpearth' },
                                 { name: 'pick jackpot earth label', position: [-80, -65], scale: 0.5, type: 'sprite', image: 'jpearthheader' },
-                                { type: 'sprite', image: 'splat', position: [120, 0] },
+                                { name: 'pick jackpot earth splat', type: 'sprite', image: 'splat', position: [120, 0] },
                                 { //###### bitmap-font  used !!!!!
                                     name: 'pick jackpot earth text', anchor: [1, 0.5], position: [30, 50], type: 'bitmap-text', text: '900', scale: 0.6,
                                     styles: { align: 'right', font: { name: 'font', size: 90 }, tint: 0xFFFFFF }
                                 },
-                                { position: [120, 0], childs: [
+                                {   position: [120, 0], childs: [
                                         { type: 'sprite', image: 'last', position: [0, -70] },
                                         {
                                             name: 'pick jackpot earth value',  type: 'bitmap-text', text: '18', position: [0, 20],
                                             styles: { align: 'right', font: { name: 'red', size: 70 }, tint: 0xFFFFFF }
                                         },
                                     ]
+                                },
+                                {
+                                    name: 'pick jackpot earth overflow value', type: 'bitmap-text', text: 'x12', position: [120, 0], visible: false,
+                                    styles: { align: 'right', font: { name: 'green', size: 70 }, tint: 0xFFFFFF }
                                 },
                                 { name: 'pick jackpot earth glow', position: [-84, 0], type: 'sprite', image: 'jpearthglow', alpha: 0 },
                             ]
@@ -1039,7 +1048,7 @@ App.Gameplay = new Screen({
                                 { name: 'pick jackpot fire bg', position: [0, 50], type: 'sprite', image: 'jackpotbg' },
                                 { name: 'pick jackpot fire icon', position: [-84, 0], type: 'sprite', image: 'jpfire' },
                                 { name: 'pick jackpot fire label', position: [-80, -65], scale: 0.5, type: 'sprite', image: 'jpfireheader' },
-                                { type: 'sprite', image: 'splat', position: [120, 0] },
+                                { name: 'pick jackpot fire splat', type: 'sprite', image: 'splat', position: [120, 0] },
                                 { //###### bitmap-font  used !!!!!
                                     name: 'pick jackpot fire text', anchor: [1, 0.5], position: [30, 50], type: 'bitmap-text', text: '900', scale: 0.6,
                                     styles: { align: 'right', font: { name: 'font', size: 90 }, tint: 0xFFFFFF }
@@ -1052,6 +1061,10 @@ App.Gameplay = new Screen({
                                         },
                                     ]
                                 },
+                                {
+                                    name: 'pick jackpot fire overflow value', type: 'bitmap-text', text: 'x12', position: [120, 0], visible: false,
+                                    styles: { align: 'right', font: { name: 'green', size: 70 }, tint: 0xFFFFFF }
+                                },
                                 { name: 'pick jackpot fire glow', position: [-84, 0], type: 'sprite', image: 'jjpfireglow', alpha: 0 },
                             ]
                         },
@@ -1060,7 +1073,7 @@ App.Gameplay = new Screen({
                                 { name: 'pick jackpot water bg', position: [0, 50], type: 'sprite', image: 'jackpotbg' },
                                 { name: 'pick jackpot water icon', position: [-84, 0], type: 'sprite', image: 'jpwater' },
                                 { name: 'pick jackpot water label', position: [-80, -65], scale: 0.5, type: 'sprite', image: 'jpwaterheader' },
-                                { type: 'sprite', image: 'splat', position: [120, 0] },
+                                { name: 'pick jackpot water splat', type: 'sprite', image: 'splat', position: [120, 0] },
                                 { //###### bitmap-font  used !!!!!
                                     name: 'pick jackpot water text', anchor: [1, 0.5], position: [30, 50], type: 'bitmap-text', text: '900', scale: 0.6,
                                     styles: { align: 'right', font: { name: 'font', size: 90 }, tint: 0xFFFFFF }
@@ -1073,6 +1086,10 @@ App.Gameplay = new Screen({
                                         },
                                     ]
                                 },
+                                {
+                                    name: 'pick jackpot water overflow value', type: 'bitmap-text', text: 'x12', position: [120, 0], visible: false,
+                                    styles: { align: 'right', font: { name: 'green', size: 70 }, tint: 0xFFFFFF }
+                                },
                                 { name: 'pick jackpot water glow', position: [-84, 0], type: 'sprite', image: 'jpwaterglow', alpha: 0 },
                             ]
                         },
@@ -1081,7 +1098,7 @@ App.Gameplay = new Screen({
                                 { name: 'pick jackpot thunder bg', position: [0, 50], type: 'sprite', image: 'jackpotbg' },
                                 { name: 'pick jackpot thunder icon', position: [-84, 0], type: 'sprite', image: 'jpthunder' },
                                 { name: 'pick jackpot thunder label', position: [-80, -65], scale: 0.5, type: 'sprite', image: 'jpthunderheader' },
-                                { type: 'sprite', image: 'splat', position: [120, 0] },
+                                { name: 'pick jackpot thunder splat', type: 'sprite', image: 'splat', position: [120, 0] },
                                 { //###### bitmap-font  used !!!!!
                                     name: 'pick jackpot thunder text', anchor: [1, 0.5], position: [30, 50], type: 'bitmap-text', text: '900', scale: 0.6,
                                     styles: { align: 'right', font: { name: 'font', size: 90 }, tint: 0xFFFFFF }
@@ -1094,6 +1111,10 @@ App.Gameplay = new Screen({
                                         },
                                     ]
                                 },
+                                {
+                                    name: 'pick jackpot thunder overflow value', type: 'bitmap-text', text: 'x12', position: [120, 0], visible: false,
+                                    styles: { align: 'right', font: { name: 'green', size: 70 }, tint: 0xFFFFFF }
+                                },
                                 { name: 'pick jackpot thunder glow', position: [-84, 0], type: 'sprite', image: 'jpthunderglow', alpha: 0 },
                             ]
                         },
@@ -1102,7 +1123,7 @@ App.Gameplay = new Screen({
                                 { name: 'pick jackpot wind bg', position: [0, 50], type: 'sprite', image: 'jackpotbg' },
                                 { name: 'pick jackpot wind icon', position: [-84, 0], type: 'sprite', image: 'jpwind' },
                                 { name: 'pick jackpot wind label', position: [-80, -65], scale: 0.5, type: 'sprite', image: 'jpwindheader' },
-                                { type: 'sprite', image: 'splat', position: [120, 0] },
+                                { name: 'pick jackpot wind splat', type: 'sprite', image: 'splat', position: [120, 0] },
                                 { //###### bitmap-font  used !!!!!
                                     name: 'pick jackpot wind text', anchor: [1, 0.5], position: [30, 50], type: 'bitmap-text', text: '900', scale: 0.6,
                                     styles: { align: 'right', font: { name: 'font', size: 90 }, tint: 0xFFFFFF }
@@ -1115,6 +1136,10 @@ App.Gameplay = new Screen({
                                         },
                                     ]
                                 },
+                                {
+                                    name: 'pick jackpot wind overflow value', type: 'bitmap-text', text: 'x12', position: [120, 0], visible: false,
+                                    styles: { align: 'right', font: { name: 'green', size: 70 }, tint: 0xFFFFFF }
+                                },
                                 { name: 'pick jackpot wind glow', position: [-84, 0], type: 'sprite', image: 'jpwindglow', alpha: 0 },
                             ]
                         },
@@ -1123,57 +1148,125 @@ App.Gameplay = new Screen({
             ]
         },
         {
-            name: 'FreespinWonContainer',
-            visible: false,
             scaleStrategyPortrait: ['fit-to-screen', 1920, 1080],
             scaleStrategyLandscape: ['fit-to-screen', 1920, 1080],
             childs: [
                 {
-                    type: 'sprite',
-                    image: 'bonus_freespin_fgbackgroundeffect'
+                    name: 'FreespinWonContainer',
+                    visible: false,
+                    childs: [
+                        {
+                            type: 'sprite',
+                            image: 'bonus_freespin_fgbackgroundeffect'
+                        },
+                        {
+                            position: [-800, -250],
+                            scale: 0.75,
+                            type: 'sprite',
+                            image: 'bonus_freespin_bannerflair'
+                        },
+                        {
+                            position: [400, -250],
+                            scale: [-0.75, 0.75],
+                            type: 'sprite',
+                            image: 'bonus_freespin_bannerflair'
+                        },
+                        {
+                            type: 'sprite',
+                            position: [-180, -300],
+                            image: 'bonus_freespin_congratstext'
+                        },
+                        {
+                            type: 'sprite',
+                            position: [-180, -150],
+                            scale: 0.7,
+                            image: 'bonus_freespin_wontext'
+                        },
+                        {
+                            name: 'freespinwon value',
+                            type: 'bitmap-text',
+                            text: '30',
+                            position: [-200, 0],
+                            styles: { align: 'right', font: { name: 'blue', size: 70 }, tint: 0xFFFFFF }
+                        },
+                        {
+                            type: 'sprite',
+                            image: 'bonus_freespin_freetext',
+                            scale: 0.7,
+                            position: [-400, 180]
+                        },
+                        {
+                            type: 'sprite',
+                            image: 'bonus_freespin_gametext',
+                            scale: 0.7,
+                            position: [-50, 180]
+                        },
+                    ]
                 },
                 {
-                    position: [-800, -250],
-                    scale: 0.75,
-                    type: 'sprite',
-                    image: 'bonus_freespin_bannerflair'
-                },
-                {
-                    position: [400, -250],
-                    scale: [-0.75, 0.75],
-                    type: 'sprite',
-                    image: 'bonus_freespin_bannerflair'
-                },
-                {
-                    type: 'sprite',
-                    position: [-180, -300],
-                    image: 'bonus_freespin_congratstext'
-                },
-                {
-                    type: 'sprite',
-                    position: [-180, -150],
-                    scale: 0.7,
-                    image: 'bonus_freespin_wontext'
-                },
-                {
-                    name: 'freespinwon value',
-                    type: 'bitmap-text',
-                    text: '30',
-                    position: [-200, 0],
-                    styles: { align: 'right', font: { name: 'blue', size: 70 }, tint: 0xFFFFFF }
-                },
-                {
-                    type: 'sprite',
-                    image: 'bonus_freespin_freetext',
-                    scale: 0.7,
-                    position: [-400, 180]
-                },
-                {
-                    type: 'sprite',
-                    image: 'bonus_freespin_gametext',
-                    scale: 0.7,
-                    position: [-50, 180]
-                },
+                    name: 'EndFreespinWonContainer',
+                    visible: false,
+                    childs: [
+                        {
+                            type: 'sprite',
+                            image: 'bonus_freespin_fgbackgroundeffect'
+                        },
+                        {
+                            position: [-800, -250],
+                            scale: 0.75,
+                            type: 'sprite',
+                            image: 'bonus_freespin_bannerflair'
+                        },
+                        {
+                            position: [400, -250],
+                            scale: [-0.75, 0.75],
+                            type: 'sprite',
+                            image: 'bonus_freespin_bannerflair'
+                        },
+                        {
+                            type: 'sprite',
+                            position: [-180, -300],
+                            image: 'bonus_freespin_congratstext'
+                        },
+                        {
+                            type: 'sprite',
+                            position: [-180, -160],
+                            scale: 0.6,
+                            image: 'bonus_freespin_wontext'
+                        },
+                        {
+                            name: 'endfreespinwon value',
+                            type: 'bitmap-text',
+                            text: '120,675',
+                            position: [-200, 0],
+                            styles: { align: 'center', font: { name: 'font', size: 100 }, tint: 0xFFFFFF }
+                        },
+                        {
+                            name: 'endfreespinwon count',
+                            type: 'bitmap-text',
+                            text: '30',
+                            position: [-255, 170],
+                            styles: { align: 'right', font: { name: 'blue', size: 55 }, tint: 0xFFFFFF }
+                        },
+                        {
+                            type: 'sprite',
+                            image: 'bonus_freespin_duringtext',
+                            position: [-550, 180],
+                        },
+                        {
+                            type: 'sprite',
+                            image: 'bonus_freespin_freetext',
+                            scale: 0.7,
+                            position: [0, 180]
+                        },
+                        {
+                            type: 'sprite',
+                            image: 'bonus_freespin_gametext',
+                            scale: 0.7,
+                            position: [350, 180]
+                        },
+                    ]
+                }
             ]
         },
         {
@@ -1183,9 +1276,44 @@ App.Gameplay = new Screen({
             childs: [
                 {
                     name: 'jackpotWonContainer',
+                    visible: false,
+                    position: [0, -75],
                     childs: [
                         {
-                            name: ''
+                            name: 'jackpot won iconBack',
+                            type: 'sprite',
+                            scale: 2.5,
+                            image: '2'
+                        },
+                        {
+                            type: 'sprite',
+                            position: [-650, -110],
+                            image: 'bonus_freespin_bannerflair'
+                        },
+                        {
+                            type: 'sprite',
+                            position: [650, -110],
+                            scale: [-1, 1],
+                            image: 'bonus_freespin_bannerflair'
+                        },
+                        {
+                            type: 'sprite',
+                            position: [0, -110],
+                            image: 'bonus_freespin_wontext'
+                        },
+                        {
+                            name: 'jackpot won iconbanner',
+                            type: 'sprite',
+                            image: 'jpfirebanner',
+                            position: [0, 100],
+                            scale: 2,
+                        },
+                        {
+                            name: 'jackpot won value',
+                            type: 'bitmap-text',
+                            text: '19500',
+                            position: [0, 300],
+                            styles: { align: 'center', font: { name: 'font', size: 80 }, tint: 0xFFFFFF }
                         }
                     ]
                 }
@@ -1940,8 +2068,16 @@ App.Gameplay = new Screen({
             scaleStrategyLandscape: ['fit-to-screen', 1920, 1080],
             childs: [
                 {
+                    name: 'whitescreen',
+                    visible: false,
                     type: 'sprite',
                     image: 'whiteflash'
+                },
+                {
+                    name: 'blackscreen',
+                    visible: false,
+                    type: 'sprite',
+                    image: 'bonus_freespin_blackoutro'
                 }
             ]
         },
@@ -2095,7 +2231,7 @@ App.Gameplay = new Screen({
                 this.denom_value_list = [1, 2, 3, 5, 7, 10];
                 this.jackpot_value_list = [300, 450, 600, 750, 900];
                 this.pick_jackpot_value_list = [300, 450, 600, 750, 900];
-                this.pick_jackpot_count_list = [18, 18, 18, 18, 18];
+                this.pick_jackpot_count_list = [1, 1, 1, 1, 1];
                 this.bet = {
                     amount: this.denom_value_list[0] * this.line_value_list[0] * this.betperline_value_list[0],
                     drawed: this.denom_value_list[0] * this.line_value_list[0] * this.betperline_value_list[0],
@@ -2318,6 +2454,10 @@ App.Gameplay = new Screen({
                     visible: false,
                     loop: true
                 });
+                this.buildChild(this['game board symbols glow container'], {
+                    name: `reel glow ${i} container`,
+                    position: [mostLeft + this.COLUMNS_OFFSET * i, 0],
+                });
                 this.reels.push({
                     sprite: reelSprite,
                     spriteHighlight: reelSpriteHighlight,
@@ -2342,7 +2482,15 @@ App.Gameplay = new Screen({
                     this.buildChild(this['reel ' + i + ' symbol highlighted container ' + j], {
                         name: 'reel ' + i + ' symbol ' + j + ' highlight',  scale: this.SYMBOLS_SCALE, type: 'sprite', visible: false
                     });
-
+                    if(j < this.ROWS_COUNT) {
+                        this.buildChild(this[`reel glow ${i} container`], {
+                            name: 'reel ' + i + ' symbol ' + j + ' glow',
+                            position: [0, this.ROWS_OFFSET * (j - 1)],
+                            type: 'sprite',
+                            image: 'jpearthglow',
+                            visible: false
+                        });
+                    }
                     var card_index = _.random(0, App.escalibur.UniqueSymbols.length - 1);  // console.log(card_index,  i, j, card_index);
                     this.setSymbolTexture('reel ' + i + ' symbol container ' + j, App.SymbolsNames[App.escalibur.UniqueSymbols[card_index]], 'init');
                 }
@@ -2683,17 +2831,20 @@ App.Gameplay = new Screen({
             this.setButtonEnable('autospin button', false);
             this.setButtonEnable('betperline bar', false);
             this.setButtonEnable('denom bar', false);
-            this['freespin count text'].text = this.current_auto_amount;
             this.current_auto_amount--;
+            this['freespin count text'].text = this.current_auto_amount;
             if(this.current_auto_amount === 0){
-                if(this.isfreespin)
-                    this.freespinEnd = true;
                 this.auto_mode = false;
                 this.setButtonEnable('maxbet button', true);
                 this.setButtonEnable('autospin button', true);
                 this.setButtonEnable('betperline bar', true);
                 this.setButtonEnable('denom bar', true);
             }
+        }
+        if(this.isfreespin && this.current_auto_amount === 0) {
+            this['spin button text1'].visible = false;
+            this['spin button'].texture = this.getTexture("Spin_Button");
+            this.freespinEnd = true;
         }
         this.refreshPanelValues();
 
@@ -2862,6 +3013,24 @@ App.Gameplay = new Screen({
                 if (App.escalibur.WildSymbols.indexOf(imageName) != -1) {  //Wild
                     SoundManager.playSound('drop_0');
                 }
+                console.log(imageName);
+                let imageNames = ['S06', 'S07', 'S08', 'S09', 'S10'];
+                if(this.isfreespin /*&& this.total_freespin_amount > 0*/ && imageNames.indexOf(imageName) > -1) {
+                    let symbolImage = {
+                        "S06": "wind",
+                        "S07": "thunder",
+                        "S08": "water",
+                        "S09": "fire",
+                        "S10": "earth",
+                    };
+                    this[`reel ${reel} symbol ${i} glow`].texture = this.getTexture(`jp${symbolImage[imageName]}glow`);
+                    console.log(`reel ${reel} symbol ${i} glow`);
+                    let xTarget = this.getAbsolutePos(`reel ${reel} symbol ${i} glow`);
+                    let yTarget = this.getAbsolutePos(`pick jackpot ${symbolImage[imageName]} icon`);
+                    console.log(xTarget);
+                    console.log(yTarget);
+                    this.glowMoveAnimation(xTarget, yTarget, 500, `reel ${reel} symbol ${i} glow`);
+                }
             }
         }
 
@@ -2898,11 +3067,13 @@ App.Gameplay = new Screen({
             }
         //end of replace drop movies
 
-        if(this.isfreespin && this.total_freespin_amount === 0) {
-            if(this.freespinEnd) {
+        if (this.isfreespin && this.freespinEnd) {
+            setTimeout(() => {
                 this.endFreespinAnimation();
-                this.freespinEnd = false;
-            }
+            }, 3000);
+        }
+
+        if(this.isfreespin && this.total_freespin_amount === 0) {
             setTimeout(() => {
                 this.pickContainerAnimation();
             }, 5000);
@@ -3337,7 +3508,8 @@ App.Gameplay = new Screen({
         }, 2000);
     },
 
-    startFlashWhite: function () {
+    startFlashWhite: function (white = true) {
+        this['FlashContainer'].visible = true;
         this.tween({
             set: [
                 ['visible', 1],
@@ -3354,11 +3526,14 @@ App.Gameplay = new Screen({
                     set: ['visible', 0]
                 }
             }
-        }, 'FlashContainer')
+        }, white ? 'whitescreen' : 'blackscreen');
+        setTimeout(() => {
+            this['FlashContainer'].visible = true;
+        }, 800);
     },
 
     pickContainerAnimation: function () {
-        this.startFlashWhite();
+        this.startFlashWhite(true);
         setTimeout(() => {
             this.updatePickJackpotValue(true);
             this.total_freespin_amount = 0;
@@ -3368,6 +3543,7 @@ App.Gameplay = new Screen({
             this['pick jackpot container'].visible = true;
             for(let i = 1; i < 11; i++) {
                 this[`pick item ${i}`].visible = true;
+                this[`pick item ${i} back`].visible = true;
             }
             this.tween({
                 set: [
@@ -3411,7 +3587,61 @@ App.Gameplay = new Screen({
     },
 
     endFreespinAnimation: function() {
+        this.total_freespin_amount = 0;
+        this.freespinEnd = false;
+        let animId = 0;
+        this.pick_jackpot_count_list.forEach((value, index) => {
+            if(value < 0) {
+                animId ++;
+                setTimeout(() => {
+                    this['jackpot won iconBack'].texture = this.getTexture(index + 1);
+                    this['jackpot won iconbanner'].texture = this.getTexture(`jp${this.jackpotList[index]}banner`);
+                    this['jackpot won value'].text = this.numberToString(Math.abs(value) * this.pick_jackpot_value_list[index]);
+                    this.tween({
+                        set: [
+                            ['visible', 1],
+                            ['scale', 0.7],
+                            ['alpha', 0]
+                        ],
+                        to: [
+                            ['alpha', 1, 300],
+                            ['scale', 1, 600]
+                        ],
+                        next: {
+                            to: ['scale', 1, 600],
+                            next: {
+                                set: ['visible', 0],
+                            }
+                        }
+                    }, 'jackpotWonContainer');
+                }, 1200 * (animId - 1));
+            }
+        });
+        setTimeout(() => {
+            this.endcongratAnimation();
+        }, 1200 * (animId - 1)+ 2000);
+    },
 
+    endcongratAnimation: function() {
+        this['endfreespinwon value'].text = this.server_win_amount.value;
+        this['EndFreespinWonContainer'].visible = true;
+        this['EndFreespinWonContainer'].alpha = 0.8;
+        setTimeout(() => {
+            this.tween({
+                to: ['alpha', 0, 500],
+                next: {
+                    set: ['visible', 0]
+                }
+            }, 'EndFreespinWonContainer');
+            this.startFlashWhite(false);
+            this.setFreespinMode(false);
+            this['jackpot container'].visible = true;
+            this['pick jackpot container'].visible = false;
+            setTimeout(() => {
+                this.isfreespin = false;
+                this.showBigWin(this.server_win_amount.value);
+            }, 800);
+        }, 5000);
     },
 
     setActiveTouchItems: function(active = true) {
@@ -3540,12 +3770,14 @@ App.Gameplay = new Screen({
                 this.setButtonEnable('autospin button', false);
                 this.setButtonEnable('betperline bar', false);
                 this.setButtonEnable('denom bar', false);
+                this['spin button text1'].visible = true;
+                this['spin button'].texture = this.getTexture("Spin_ButtonBlankUp");
             } else {
                 this.setActiveTouchItems(true);
                 this[`pick open ${type} container`].visible = false;
                 this['pick open back'].visible = false;
             }
-        }, 5000);
+        }, 4000);
     },
 
     updatePickValue: function(value) {
@@ -3558,14 +3790,30 @@ App.Gameplay = new Screen({
         if(initial) {
             for (let i = 0; i < 5; i++) {
                 this.pick_jackpot_value_list[i] = this.jackpot_value_list[i] * this.betperlines.value;
+                this[`pick jackpot ${this.jackpotList[i]} splat`].visible = true;
+                this[`pick jackpot ${this.jackpotList[i]} value`].parent.visible = true;
+                this[`pick jackpot ${this.jackpotList[i]} overflow value`].visible = false;
                 this[`pick jackpot ${this.jackpotList[i]} value`].text = this.pick_jackpot_count_list[i];
                 this[`pick jackpot ${this.jackpotList[i]} text`].text = this.pick_jackpot_value_list[i];
             }
-            this.pick_jackpot_count_list = [18, 18, 18, 18, 18];
+            this.pick_jackpot_count_list = [1, 1, 1, 1, 1];
         } else {
             for (let i = 0; i < 5; i++) {
                 this[`pick jackpot ${this.jackpotList[i]} text`].text = this.pick_jackpot_value_list[i];
-                this[`pick jackpot ${this.jackpotList[i]} value`].text = this.pick_jackpot_count_list[i];
+                if(this.pick_jackpot_count_list[i] > 0) {
+                    this[`pick jackpot ${this.jackpotList[i]} splat`].visible = true;
+                    this[`pick jackpot ${this.jackpotList[i]} value`].parent.visible = true;
+                    this[`pick jackpot ${this.jackpotList[i]} overflow value`].visible = false;
+                    this[`pick jackpot ${this.jackpotList[i]} value`].text = this.pick_jackpot_count_list[i];
+                } else {
+                    if(this.pick_jackpot_count_list[i] === 0) {
+                        this.pick_jackpot_count_list[i] = -1;
+                    }
+                    this[`pick jackpot ${this.jackpotList[i]} splat`].visible = false;
+                    this[`pick jackpot ${this.jackpotList[i]} value`].parent.visible = false;
+                    this[`pick jackpot ${this.jackpotList[i]} overflow value`].text = `x${Math.abs(this.pick_jackpot_count_list[i])}`;
+                    this[`pick jackpot ${this.jackpotList[i]} overflow value`].visible = true;
+                }
             }
         }
     },
@@ -3582,10 +3830,11 @@ App.Gameplay = new Screen({
     updateRemainingText: function() {
         this.tween({
             set: ['drawed', this['pick remaining text'].drawed],
-            to: ['drawed', this.total_freespin_amount, 500, 100, Expo.easeOut],
+            to: ['drawed', this.total_freespin_amount, 500, 100, Power1.easeIn],
             update: () => { this['pick remaining text'].text = this.numberToString(Math.trunc(this['pick remaining text'].drawed));}
         }, 'pick remaining text');
         this['freespinwon value'].text = this.total_freespin_amount.toString();
+        this['endfreespinwon count'].text = this.total_freespin_amount.toString();
     },
 
     getAbsolutePos: function(target) {
@@ -3625,7 +3874,7 @@ App.Gameplay = new Screen({
     },
 
     exitPickcontainerAnimation: function() {
-        this.startFlashWhite();
+        this.startFlashWhite(true);
         setTimeout(() => {
             this['PickContainer'].visible = false;
             this['FreespinWonContainer'].visible = true;
@@ -4064,7 +4313,7 @@ App.Gameplay = new Screen({
                 this['startfreespin button'].visible = this.auto_mode && this.isfreespin;
                 this['startautospin button'].visible = (this.current_auto_amount > 0) && (!this.auto_mode);
 
-                // enalble / disable
+                // enable / disable
                 this['autospin button'].interactive = (!this.auto_mode);
                 this['menu button'].interactive =  (!this.auto_mode);
                 this['betperline bar down'].interactive = (!this.auto_mode )&& (this.state == 'ready');
