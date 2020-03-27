@@ -15,19 +15,19 @@ var SoundManager = ({
             }
         },
 
-        //#### Background Music 
+        //#### Background Music
         backgroundMusic: false,
         playBackgroundMusic: function (name, loop/*=true*/) {
             if (loop === undefined) loop = true;
             //this.stopBackgroundMusic();
-            App.Gameplay.playSound(name, {}, { volume: this.sound_mode ? 1 : 0, loop: loop }, sound => {
+            App.Gameplay.playSound(name, {}, { volume: this.sound_mode ? 0.5 : 0, loop: loop }, sound => {
                 this.backgroundMusic = sound;
             });
         },
         stopBackgroundMusic:function() {
             if (this.backgroundMusic && this.backgroundMusic._media) this.backgroundMusic.stop(); this.backgroundMusic = false;
         },
-        
+
         winSound: false,
         playWinSound: function (name, loop/*=false*/) {
             if (loop === undefined) loop = false;
@@ -44,16 +44,16 @@ var SoundManager = ({
         soundMap: [],
         getSoundIndex: function (name) {
             for (var i = 0; i < this.soundMap.length; i++)
-                if (this.soundMap[i].name == name)
+                if (this.soundMap[i].name === name)
                     return i;
             return -1;
         },
-        playSound: function (name, ignorePrev) {
+        playSound: function (name, volume = 1, ignorePrev) {
             var idx = this.getSoundIndex(name);
-            if (!ignorePrev && idx != -1 && this.soundMap[idx].sound && this.soundMap[idx].sound._media)
+            if (!ignorePrev && idx !== -1 && this.soundMap[idx].sound && this.soundMap[idx].sound._media)
                 this.soundMap[idx].sound.stop(); //.volume = 0;
-            App.Gameplay.playSound(name, {}, { volume: this.sound_mode ? 1 : 0, loop: false }, sound => {
-                if (idx == -1)
+            App.Gameplay.playSound(name, {}, { volume: this.sound_mode ? volume : 0, loop: false }, sound => {
+                if (idx === -1)
                     this.soundMap.push({ name: name, sound: sound });
                 else
                     this.soundMap[idx].sound = sound;
@@ -69,7 +69,7 @@ var SoundManager = ({
             }
         },
         stopAllSound: function () {
-            for (var i = 0; i < this.soundMap.length; i++) 
+            for (var i = 0; i < this.soundMap.length; i++)
                 this.stopSoundAt(i);
             this.currentSound = false;
         },
