@@ -3,8 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="dd7d46ce-6e1c-4eaa-84c4-b489fb97a84a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/App/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/App/Screens/Gameplay.js" beforeDir="false" afterPath="$PROJECT_DIR$/App/Screens/Gameplay.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/SoundManager.js" beforeDir="false" afterPath="$PROJECT_DIR$/App/SoundManager.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Math/Slots/Escalibur.js" beforeDir="false" afterPath="$PROJECT_DIR$/Math/Slots/Escalibur.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,7 +74,8 @@
       <workItem from="1585207622500" duration="3433000" />
       <workItem from="1585240111971" duration="5234000" />
       <workItem from="1585264833789" duration="1390000" />
-      <workItem from="1585291084227" duration="7638000" />
+      <workItem from="1585291084227" duration="17967000" />
+      <workItem from="1585325546217" duration="6535000" />
     </task>
     <task id="LOCAL-00001" summary="updated gitignore file">
       <created>1584307555461</created>
@@ -103,7 +105,14 @@
       <option name="project" value="LOCAL" />
       <updated>1585175204284</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Ui completed&#10;I am integrating API">
+      <created>1585301805008</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1585301805008</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -116,36 +125,37 @@
     <MESSAGE value="1. help screen added&#10;2. blue and red font added" />
     <MESSAGE value="freespin showing animation completed" />
     <MESSAGE value="freespin glow animation not yet completed" />
-    <option name="LAST_COMMIT_MESSAGE" value="freespin glow animation not yet completed" />
+    <MESSAGE value="Ui completed&#10;I am integrating API" />
+    <option name="LAST_COMMIT_MESSAGE" value="Ui completed&#10;I am integrating API" />
   </component>
   <component name="WindowStateProjectService">
     <state x="724" y="329" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1584474399806">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="724" y="329" key="#com.intellij.fileTypes.FileTypeChooser/1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1584474399806" />
-    <state x="585" y="119" key="CommitChangelistDialog2" timestamp="1585175199626">
+    <state x="585" y="119" key="CommitChangelistDialog2" timestamp="1585301802517">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="585" y="119" key="CommitChangelistDialog2/1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1585175199626" />
-    <state x="552" y="259" key="Vcs.Push.Dialog.v2" timestamp="1585175206972">
+    <state x="585" y="119" key="CommitChangelistDialog2/1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1585301802517" />
+    <state x="552" y="259" key="Vcs.Push.Dialog.v2" timestamp="1585301807953">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="552" y="259" key="Vcs.Push.Dialog.v2/1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1585175206972" />
+    <state x="552" y="259" key="Vcs.Push.Dialog.v2/1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1585301807953" />
     <state x="647" y="156" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1585179054944">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="647" y="156" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1585179054944" />
-    <state x="656" y="257" width="737" height="606" key="find.popup" timestamp="1585178837827">
+    <state x="656" y="257" width="737" height="606" key="find.popup" timestamp="1585330771276">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="656" y="257" width="737" height="606" key="find.popup/1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1585178837827" />
+    <state x="656" y="257" width="737" height="606" key="find.popup/1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1585330771276" />
     <state x="616" y="243" key="run.anything.popup" timestamp="1584612582371">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="616" y="243" key="run.anything.popup/1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1584612582371" />
-    <state x="623" y="227" width="672" height="678" key="search.everywhere.popup" timestamp="1585178711254">
+    <state x="623" y="227" width="672" height="678" key="search.everywhere.popup" timestamp="1585331888954">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="623" y="227" width="672" height="678" key="search.everywhere.popup/1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1585178711254" />
+    <state x="623" y="227" width="672" height="678" key="search.everywhere.popup/1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1585331888954" />
   </component>
 </project>

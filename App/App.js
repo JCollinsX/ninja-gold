@@ -15,11 +15,11 @@
 	    'S03': '8', //Q         UniqueSymbols[3]
 	    'S04': '7', //K         UniqueSymbols[4]
 	    'S05': '6', //A         UniqueSymbols[5]
-	    'S06': '5', //Green     UniqueSymbols[6]
-	    'S07': '4', //Cyan      UniqueSymbols[7]
-	    'S08': '3', //Blue      UniqueSymbols[8]
-	    'S09': '2', //Mergenta  UniqueSymbols[9]
-	    'S10': '1', //Yellow    UniqueSymbols[10]
+	    'S06': '5', //Green(wind)     UniqueSymbols[6]
+	    'S07': '4', //Cyan(thunder)      UniqueSymbols[7]
+	    'S08': '3', //Blue(water)      UniqueSymbols[8]
+	    'S09': '2', //Mergenta(fire)  UniqueSymbols[9]
+	    'S10': '1', //Yellow(earth)    UniqueSymbols[10]
 	    'Scatter': '12', //     UniqueSymbols[11]
 	    'Wild': '0', //         UniqueSymbols[12]
 	},
@@ -30,7 +30,7 @@
 	    'WIN_EF_GILT_00_':  { start: 0, end: 24, speed: 0.3, suffix:'', frames: [] }, //confetti.png
 	    'RHL_EF_REEL_00_':  { start: 0, end: 9,  speed: 0.3, suffix:'', frames: [] }, //reelanticipation-hd.png
 	    'PIC_EF_TOUCH_00_': { start: 0, end: 13, speed: 0.3, suffix:'', frames: [] }, //sparkle.png
-                                                             suffix:'', 
+                                                             suffix:'',
 	    'SYM_SY_WLHIT_00_': { start: 0, end: 24, speed: 0.3, suffix:'', frames: [] }, //animations/0.png
 	    'SYM_SY_BOTRI_00_': { start: 0, end: 24, speed: 0.3, suffix:'', frames: [] }, //animations/12.png
 	    'SYM_SY_BOSTP_00_': { start: 0, end: 24, speed: 0.3, suffix:'', frames: [] }, //animations/12drop.png
@@ -39,7 +39,7 @@
 	},
 
 	Lines:{
-		"None":  {color: 0x000000, nodepos:[0,0], 		positions:[[0,0],[1,1]]}, 
+		"None":  {color: 0x000000, nodepos:[0,0], 		positions:[[0,0],[1,1]]},
 		//Left
 		"Line4":  {color: 0xff9900, nodepos:[-671,-355], positions:[[-630,-367],[-509,-367],            [0,177],			[498,-350],[616,-350]] },
 		"Line20": {color: 0x003aff, nodepos:[-671,-308], positions:[[-630,-302],[-509,-302],[-254,256], [0,307], [254,256], [498,-228],[616,-228]] },
@@ -91,7 +91,7 @@
 	    } //*/
 
 	    //jakovsoft Add
-	    var movieNames = Object.keys(this.MovieClips); 
+	    var movieNames = Object.keys(this.MovieClips);
 	    movieNames.forEach((name) => {
 	        let frames = [];
 	        for (let k = App.MovieClips[name].start; k <= App.MovieClips[name].end; k++) {

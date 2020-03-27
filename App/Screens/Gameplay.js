@@ -2654,18 +2654,17 @@ App.Gameplay = new Screen({
         'Gameplay pick item down': function(container, e) {
             if(this.pickState !== 'ready') return;
             SoundManager.playSound('pick_open');
-            let types = ['begin', 'remaining', 'baseup'];
-            let values = ['10', '5', 'fire'];
-            values[2] = this.jackpotList[Math.floor(Math.random() * this.jackpotList.length)];
+            // let types = ['begin', 'remaining', 'baseup'];
+            // let values = ['10', '5', 'fire'];
+            // values[2] = this.jackpotList[Math.floor(Math.random() * this.jackpotList.length)];
             this.setActiveTouchItems(false);
-            let itemNumber = container.name.split(' ')[2];
             this[container.name + ' back'].visible = false;
             this[container.name + ' glow'].visible = true;
             this[container.name + ' glow'].gotoAndPlay(0);
             setTimeout(() => {
                 this[container.name].visible = false;
-                let randIdx = Math.floor(Math.random() * types.length);
-                this.showPickOpenContainer(container.color, types[randIdx], values[randIdx]);
+                this.showPickOpenContainer(container.color, this.pickBookData[this.pickIndex][0], this.pickBookData[this.pickIndex][1]);
+                this.pickIndex ++;
             }, 300);
         },
 
@@ -2813,8 +2812,7 @@ App.Gameplay = new Screen({
 
         } else {
             if (this.freespin_count !== 0 && this.freespin_count === this.freespin_index) {
-                this.completeFreespin();
-                console.log(this.total_freespin_amount);
+                // this.completeFreespin();
             }
             if (this.credits.value - this.bet.amount >= 0) {
                 this.credits.value -= this.bet.amount;
@@ -2850,7 +2848,7 @@ App.Gameplay = new Screen({
             this.setButtonEnable('betperline bar', false);
             this.setButtonEnable('denom bar', false);
             this.current_auto_amount--;
-            this['freespin count text'].text = this.current_auto_amount;
+
             if(this.current_auto_amount === 0){
                 this.auto_mode = false;
                 this.setButtonEnable('maxbet button', true);
@@ -2859,7 +2857,7 @@ App.Gameplay = new Screen({
                 this.setButtonEnable('denom bar', true);
             }
         }
-        if(this.isfreespin && this.current_auto_amount === 0) {
+        if(this.isfreespin && ((this.freespin_count - 1) === this.freespin_index)) {
             this['spin button text1'].visible = false;
             this['spin button'].texture = this.getTexture("Spin_Button");
             this.freespinEnd = true;
@@ -2908,8 +2906,11 @@ App.Gameplay = new Screen({
                         this.freespin_count = 1;
                     } else if (arrRetval[i].retType === 4) { //In bonus case
                         var scatters = arrRetval[i];
-                        this.freespin_count = scatters.count; //freeSpinCount
+                        this.freespin_count = scatters.pickDetail.freeSpinCount; //freeSpinCount
+                        this.total_freespin_amount = 0;
                         this.isfreespin = this.freespin_count > 0;
+                        this.freespin_index = 0;
+                        this.isfreespinStart = true;
                         this.spinCombination.winData.winScatters = [];
                         if (scatters.arrMatchedCardsXPos.length > 0) {
                             var scatter_data1 = [];
@@ -2925,11 +2926,39 @@ App.Gameplay = new Screen({
                             scatter_data1.push(scatters.arrMatchedCardsXPos.length);  //3:scatter symbol count!
                             this.spinCombination.winData.winScatters.push(scatter_data1);
                         }
+                        this.pickIndex = 0;
+                        this.pickBookData = [];
+                        scatters.pickCardData.forEach(item => {
+                            switch (item.type) {
+                                case 'earthJackpot':
+                                    this.pickBookData.push(['baseup', 'earth']);
+                                    break;
+                                case 'fireJackpot':
+                                    this.pickBookData.push(['baseup', 'fire']);
+                                    break;
+                                case 'waterJackpot':
+                                    this.pickBookData.push(['baseup', 'water']);
+                                    break;
+                                case 'thunderJackpot':
+                                    this.pickBookData.push(['baseup', 'thunder']);
+                                    break;
+                                case 'windJackpot':
+                                    this.pickBookData.push(['baseup', 'wind']);
+                                    break;
+                                case 'begin':
+                                    this.pickBookData.push(['begin', '10']);
+                                    break;
+                                case 'remaining':
+                                    this.pickBookData.push(['remaining', '5']);
+                                    break;
+                            }
+                        });
+                        this.jackpotInfo = scatters.pickDetail;
+                        // this.pick_jackpot_value_list = [];
                     }
                 }
 
                 this.server_arrRetVal = newArrRetval;
-                console.log(this.server_arrRetVal)
                 if (arrRetval.length !== 0) {
                     if (arrRetval[0].retType === 0) { // In Case NORMAL
                         this.is_bonus = false;
@@ -2942,6 +2971,14 @@ App.Gameplay = new Screen({
                         this.is_bonus = true;
                         this.bonus_amount = parseInt(arrRetval[0].win);
                         this.server_win_amount.value = parseInt(arrRetval[0].win);
+                    }
+                }
+
+                if(this.isfreespin && this.isfreespinStart === false) {
+                    if(this.freespin_count !== this.freespin_index) {
+                        this.total_freespin_amount += serverData.data.winAmount;
+                        this.freespin_index ++;
+                        this['freespin count text'].text = this.freespin_count - this.freespin_index;
                     }
                 }
             } else {
@@ -3098,9 +3135,10 @@ App.Gameplay = new Screen({
             }, 3000);
         }
 
-        if(this.isfreespin && this.total_freespin_amount === 0) {
+        if(this.isfreespin && this.isfreespinStart === true) {
             setTimeout(() => {
                 SoundManager.stopAllSound();
+                this.isfreespinStart = false;
                 this.pickContainerAnimation();
             }, 5000);
         }
@@ -3613,7 +3651,6 @@ App.Gameplay = new Screen({
     },
 
     endFreespinAnimation: function() {
-        this.total_freespin_amount = 0;
         this.freespinEnd = false;
         let animId = 0;
         this.pick_jackpot_count_list.forEach((value, index) => {
@@ -3623,6 +3660,7 @@ App.Gameplay = new Screen({
                     this['jackpot won iconBack'].texture = this.getTexture(index + 1);
                     this['jackpot won iconbanner'].texture = this.getTexture(`jp${this.jackpotList[index]}banner`);
                     this['jackpot won value'].text = this.numberToString(Math.abs(value) * this.pick_jackpot_value_list[index]);
+                    this.total_freespin_amount += Math.abs(value) * this.pick_jackpot_value_list[index];
                     this.tween({
                         set: [
                             ['visible', 1],
@@ -3645,11 +3683,12 @@ App.Gameplay = new Screen({
         });
         setTimeout(() => {
             this.endcongratAnimation();
+            this.sendFreespinResult(this.total_freespin_amount);
         }, 1200 * (animId - 1)+ 2000);
     },
 
     endcongratAnimation: function() {
-        this['endfreespinwon value'].text = this.server_win_amount.value;
+        this['endfreespinwon value'].text = this.total_freespin_amount;
         this['EndFreespinWonContainer'].visible = true;
         this['EndFreespinWonContainer'].alpha = 0.8;
         setTimeout(() => {
@@ -3666,7 +3705,7 @@ App.Gameplay = new Screen({
             setTimeout(() => {
                 this.isfreespin = false;
                 this.pick_jackpot_count_list = [18, 18, 18, 18, 18];
-                this.showBigWin(this.server_win_amount.value);
+                this.showBigWin(this.total_freespin_amount);
             }, 800);
         }, 5000);
     },
@@ -4461,16 +4500,15 @@ App.Gameplay = new Screen({
 
             getFakeServerData: function () {
                 var rand = _.random(0, 3);
-                var rand = this.isfreespin ? 2 : 3;
-                rand = 6;
+                var rand = this.isfreespin ? 1 : 7;
                 switch (rand) {
                     case 1: //Win 2 - Q, K, Wild: Q or K will blank, Wild is movie-clip
-                        var response = {"error":"0","response":{"initCards":[[6,4,3],[3,1,4],[12,6,7],[4,1,9],[3,3,4]],"arrRetVal":[
+                        var response = {"status":"success","data":{"initCards":[[6,4,3],[3,1,4],[12,6,7],[4,1,9],[3,3,4]],"arrRetVal":[
                             {"retType":0,"win":1.5,"lineposIdx":19,"cardCount":3},
                             {"retType":0,"win":1.5,"lineposIdx":23,"cardCount":3}],"betAmount":0.3,"winAmount":3,"balance":10003}};
                         break;
                     case 2: //BigWin - A, Fire, Wild: Fire's animation different with A's.
-                        var response = {"error":"0","response":{"initCards":[[5,9,12],[5,12,3],[5,9,4],[12,1,7],[2,3,6]],"arrRetVal":[
+                        var response = {"status":"success","data":{"initCards":[[5,9,12],[5,12,3],[5,9,4],[12,1,7],[2,3,6]],"arrRetVal":[
                             {"retType":0,"win":40,"lineposIdx":0,"cardCount":3},
                             {"retType":0,"win":1000,"lineposIdx":2,"cardCount":4}],"betAmount":50,"winAmount":1040,"balance":1500}};
                         break;
@@ -4502,7 +4540,7 @@ App.Gameplay = new Screen({
                                     }
                                 ],
                                 "arrJackpot":[300,450,600,750,900],
-                                "betAmount":30,"originalBetAmount":30,"winAmount":32,"winType":0}}
+                                "betAmount":30,"originalBetAmount":30,"winAmount":32,"winType":0, "balance":13000}}
                         break;
                     default: //normal
                         var response = {"error":"0","response":{"initCards":[[6,1,1],[0,7,0],[6,3,6],[5,6,2],[2,5,2]],"arrRetVal":[],"betAmount":0.3,"winAmount":0,"balance":10000}};
@@ -4681,11 +4719,21 @@ App.Gameplay = new Screen({
                         { key: 'play_for_fun',   value: 0  }
                     ]
                 };
-                if (isfreespin === true)
-                    options.params.push({ key: 'wildReelAry', value: this.wildReelArray });
+                if (isfreespin === true) {
+                    options.params.push({key: 'jackpotInfo', value: this.jackpotInfo});
+                }
                 return this.apiRequest(options);
             },
 
+            sendFreespinResult: function(amount) {
+                var options = {
+                    endpoint: 'freespin_result',
+                    params: [
+                        { key: 'bonus_amount',          value: amount },
+                    ]
+                };
+                return this.apiRequest(options);
+            },
             sendSignalToSite: function () {
                 var options = {
                     endpoint: 'game_ping',

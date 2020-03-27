@@ -4,7 +4,7 @@
 
 		this.Name = 'Escalibur';
 
-		this.UniqueSymbols = ["S00", "S01", "S02", "S03", "S04", "S05", "S06", "S07", "S08", "S09", "S10", "Scatter", "Wild"];
+		this.UniqueSymbols = ["Wild", "S10", "S09", "S08", "S07", "S06", "S05", "S04", "S03", "S02", "S01", "S00", "Scatter"];
 
 		this.ReelSymbols = [
 			[
