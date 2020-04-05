@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="dd7d46ce-6e1c-4eaa-84c4-b489fb97a84a" name="Default Changelist" comment="api integration completed">
+    <list default="true" id="dd7d46ce-6e1c-4eaa-84c4-b489fb97a84a" name="Default Changelist" comment="freespin sound and autoplay feature fixed">
+      <change afterPath="$PROJECT_DIR$/Textures/spin_intro.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Textures/spin_intro.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/App/Screens/Gameplay.js" beforeDir="false" afterPath="$PROJECT_DIR$/App/Screens/Gameplay.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/App/Setting.js" beforeDir="false" afterPath="$PROJECT_DIR$/App/Setting.js" afterDir="false" />
@@ -24,10 +26,11 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/Fonts" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/Textures" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\pkm\xampp7\htdocs\slot\ninja-gold\Textures" />
       <recent name="E:\pkm\xampp7\htdocs\slot\ninja-gold\Fonts" />
       <recent name="E:\pkm\xampp7\htdocs\slot\ninja-gold\Images" />
     </key>
@@ -81,7 +84,8 @@
       <workItem from="1585859074685" duration="2374000" />
       <workItem from="1585943716213" duration="3230000" />
       <workItem from="1585981479211" duration="8064000" />
-      <workItem from="1586072578233" duration="13681000" />
+      <workItem from="1586072578233" duration="18087000" />
+      <workItem from="1586099974289" duration="2022000" />
     </task>
     <task id="LOCAL-00001" summary="updated gitignore file">
       <created>1584307555461</created>
@@ -125,7 +129,14 @@
       <option name="project" value="LOCAL" />
       <updated>1585334596136</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="freespin sound and autoplay feature fixed">
+      <created>1586088649697</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1586088649697</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -140,25 +151,26 @@
     <MESSAGE value="freespin glow animation not yet completed" />
     <MESSAGE value="Ui completed&#10;I am integrating API" />
     <MESSAGE value="api integration completed" />
-    <option name="LAST_COMMIT_MESSAGE" value="api integration completed" />
+    <MESSAGE value="freespin sound and autoplay feature fixed" />
+    <option name="LAST_COMMIT_MESSAGE" value="freespin sound and autoplay feature fixed" />
   </component>
   <component name="WindowStateProjectService">
     <state x="724" y="329" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1584474399806">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="724" y="329" key="#com.intellij.fileTypes.FileTypeChooser/1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1584474399806" />
-    <state x="585" y="119" key="CommitChangelistDialog2" timestamp="1585494635229">
+    <state x="585" y="119" key="CommitChangelistDialog2" timestamp="1586101850282">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="585" y="119" key="CommitChangelistDialog2/1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1585494635229" />
+    <state x="585" y="119" key="CommitChangelistDialog2/1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1586101850282" />
     <state x="184" y="93" width="1536" height="866" key="DiffContextDialog" timestamp="1585944150342">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="184" y="93" width="1536" height="866" key="DiffContextDialog/1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1585944150342" />
-    <state x="552" y="259" key="Vcs.Push.Dialog.v2" timestamp="1585334598505">
+    <state x="552" y="259" key="Vcs.Push.Dialog.v2" timestamp="1586088651481">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="552" y="259" key="Vcs.Push.Dialog.v2/1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1585334598505" />
+    <state x="552" y="259" key="Vcs.Push.Dialog.v2/1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1586088651481" />
     <state x="647" y="156" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1586080563045">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
@@ -167,14 +179,14 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="656" y="257" width="737" height="606" key="find.popup/1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1585605111330" />
-    <state x="616" y="243" key="run.anything.popup" timestamp="1584612582371">
+    <state x="616" y="243" key="run.anything.popup" timestamp="1586100656948">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="616" y="243" key="run.anything.popup/1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1584612582371" />
-    <state x="623" y="227" width="672" height="678" key="search.everywhere.popup" timestamp="1586013131985">
+    <state x="616" y="243" key="run.anything.popup/1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1586100656948" />
+    <state x="623" y="227" width="672" height="678" key="search.everywhere.popup" timestamp="1586092480854">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="623" y="227" width="672" height="678" key="search.everywhere.popup/1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1586013131985" />
+    <state x="623" y="227" width="672" height="678" key="search.everywhere.popup/1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1586092480854" />
     <state x="2543" y="227" width="672" height="678" key="search.everywhere.popup/1920.0.1920.1050/0.0.1920.1050@1920.0.1920.1050" timestamp="1585581540075" />
   </component>
 </project>

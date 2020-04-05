@@ -2099,6 +2099,18 @@ App.Gameplay = new Screen({
             ]
         },
         {
+            name: 'SplashScreen',
+            scaleStrategyPortrait: ['fit-to-screen', 1920, 1080],
+            scaleStrategyLandscape: ['fit-to-screen', 1920, 1080],
+            childs: [
+                {
+                    name: 'loadingScreen',
+                    type: 'sprite',
+                    image: 'loader'
+                }
+            ]
+        },
+        {
             name: 'OrientSwitchContainer',
             scaleStrategyPortrait: ['fit-to-screen', 1080, 1920],
             scaleStrategyLandscape: [0,0],
@@ -2517,6 +2529,7 @@ App.Gameplay = new Screen({
                     });
                 }
             }
+            this.spinIntroShow = true;
         },
 
         'Gameplay resize': function () {
@@ -2524,6 +2537,32 @@ App.Gameplay = new Screen({
             // this['ErrorScreen'].visible = this.userBlockLayer === undefined && this.is_local_mode === false;
             // this.refreshHelpValue();
             this.refreshPanelValues();
+            if(this.spinIntroShow === true) {
+                this.spinIntroShow = false;
+                let frames = [];
+                for(let i = 2; i <= 158; i += 4) {
+                    frames.push(`SpinLogo_V6A_${i.toString().padStart(5, '0')}.png`)
+                }
+                this.buildChild(this['SplashScreen'], {
+                    name: 'spinIntro',
+                    type: 'movie-clip',
+                    frames: frames,
+                    speed: 0.2,
+                    scale: 2
+                });
+                this['spinIntro'].gotoAndPlay(0);
+                setTimeout(() => {
+                    this['spinIntro'].visible = false;
+                    setTimeout(() => {
+                        this.tween({
+                            set: ['alpha', 1],
+                            to: ['alpha', 0, 500]
+                        }, 'loadingScreen');
+                    }, 2500);
+                }, 6000);
+            } else {
+                this['SplashScreen'].visible = false;
+            }
             /*this.helpArrowsSetPosition();
             /!*
             if (App.IsPortrait) {
@@ -2543,6 +2582,12 @@ App.Gameplay = new Screen({
                 this['AutoMenuContainer'].visible = true;*/
             if (App.IsLandscape) {
                 this.setFreespinMode(this.isfreespin);
+                this.updatePickJackpotValue(false);
+                this.setButtonEnable('maxbet button', !this.isfreespin);
+                this.setButtonEnable('autospin button', !this.isfreespin);
+                this.setButtonEnable('betperline bar', !this.isfreespin);
+                this.setButtonEnable('denom bar', !this.isfreespin);
+                this.refreshPanelValues();
                 if (this.pickVisiblityFlag) {
                     this['PickContainer'].visible = true;
                     this['jackpot container'].visible = false;
@@ -2978,7 +3023,7 @@ App.Gameplay = new Screen({
                         this.freespin_index ++;
                         this['freespin count text'].text = this.freespin_count - this.freespin_index;
                     }
-                    if(this.isfreespin && ((this.freespin_count - 1) === this.freespin_index)) {
+                    if((this.freespin_count - 1) === this.freespin_index) {
                         this['spin button text1'].visible = false;
                         this['spin button'].texture = this.getTexture("Spin_Button");
                         this.freespinEnd = true;
@@ -3150,6 +3195,10 @@ App.Gameplay = new Screen({
         }
 
         if(this.isfreespin && this.isfreespinStart === true) {
+            this.tempAutoMode = this.auto_mode;
+            this.tempCurrentAutoAmount = this.current_auto_amount;
+            this.auto_mode = false;
+            this.current_auto_amount = 0;
             setTimeout(() => {
                 SoundManager.stopAllSound();
                 this.isfreespinStart = false;
@@ -3730,6 +3779,9 @@ App.Gameplay = new Screen({
             this['pick jackpot container'].visible = false;
             setTimeout(() => {
                 this.isfreespin = false;
+                this.refreshPanelValues();
+                this.auto_mode = this.tempAutoMode;
+                this.current_auto_amount = this.tempCurrentAutoAmount;
                 this.pick_jackpot_count_list = [18, 18, 18, 18, 18];
                 this.showBigWin(this.serverWinType);
             }, 800);
@@ -4028,6 +4080,8 @@ App.Gameplay = new Screen({
             this['background'].texture = this.getTexture('background');
             this['reelsFrameBg'].texture = this.getTexture('reels');
         }
+        this['jackpot container'].visible = !freeMode;
+        this['pick jackpot container'].visible = freeMode;
     },
 
     completeFreespin: function () {
@@ -4440,8 +4494,14 @@ App.Gameplay = new Screen({
 
         // visible
         this['stopautospin button'].visible = this.auto_mode && !this.isfreespin;
-        this['startfreespin button'].visible = this.isfreespin;
+        this['startfreespin button'].visible = this.isfreespin && this.isfreespinStart === false;
         this['startautospin button'].visible = (this.current_auto_amount > 0) && (!this.auto_mode);
+
+        if(this.isfreespin && this.isfreespinStart === false) {
+            if(this.freespin_count !== this.freespin_index) {
+                this['freespin count text'].text = this.freespin_count - this.freespin_index;
+            }
+        }
 
         // enable / disable
         this['autospin button'].interactive = (!this.auto_mode);

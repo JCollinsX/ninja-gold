@@ -1,0 +1,816 @@
+{
+  "frames": {
+    "SpinLogo_V6A_00002.png": {
+      "frame": {
+        "x": 1,
+        "y": 1,
+        "w": 960,
+        "h": 540
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 960,
+        "h": 540
+      },
+      "sourceSize": {
+        "w": 960,
+        "h": 540
+      }
+    },
+    "SpinLogo_V6A_00006.png": {
+      "frame": {
+        "x": 963,
+        "y": 1,
+        "w": 960,
+        "h": 540
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 960,
+        "h": 540
+      },
+      "sourceSize": {
+        "w": 960,
+        "h": 540
+      }
+    },
+    "SpinLogo_V6A_00010.png": {
+      "frame": {
+        "x": 1925,
+        "y": 1,
+        "w": 960,
+        "h": 540
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 960,
+        "h": 540
+      },
+      "sourceSize": {
+        "w": 960,
+        "h": 540
+      }
+    },
+    "SpinLogo_V6A_00014.png": {
+      "frame": {
+        "x": 2887,
+        "y": 1,
+        "w": 960,
+        "h": 540
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 960,
+        "h": 540
+      },
+      "sourceSize": {
+        "w": 960,
+        "h": 540
+      }
+    },
+    "SpinLogo_V6A_00018.png": {
+      "frame": {
+        "x": 3849,
+        "y": 1,
+        "w": 960,
+        "h": 540
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 960,
+        "h": 540
+      },
+      "sourceSize": {
+        "w": 960,
+        "h": 540
+      }
+    },
+    "SpinLogo_V6A_00022.png": {
+      "frame": {
+        "x": 4811,
+        "y": 1,
+        "w": 960,
+        "h": 540
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 960,
+        "h": 540
+      },
+      "sourceSize": {
+        "w": 960,
+        "h": 540
+      }
+    },
+    "SpinLogo_V6A_00026.png": {
+      "frame": {
+        "x": 5773,
+        "y": 1,
+        "w": 960,
+        "h": 540
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 960,
+        "h": 540
+      },
+      "sourceSize": {
+        "w": 960,
+        "h": 540
+      }
+    },
+    "SpinLogo_V6A_00030.png": {
+      "frame": {
+        "x": 6735,
+        "y": 1,
+        "w": 960,
+        "h": 540
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 960,
+        "h": 540
+      },
+      "sourceSize": {
+        "w": 960,
+        "h": 540
+      }
+    },
+    "SpinLogo_V6A_00034.png": {
+      "frame": {
+        "x": 1,
+        "y": 543,
+        "w": 960,
+        "h": 540
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 960,
+        "h": 540
+      },
+      "sourceSize": {
+        "w": 960,
+        "h": 540
+      }
+    },
+    "SpinLogo_V6A_00038.png": {
+      "frame": {
+        "x": 963,
+        "y": 543,
+        "w": 960,
+        "h": 540
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 960,
+        "h": 540
+      },
+      "sourceSize": {
+        "w": 960,
+        "h": 540
+      }
+    },
+    "SpinLogo_V6A_00042.png": {
+      "frame": {
+        "x": 1925,
+        "y": 543,
+        "w": 960,
+        "h": 540
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 960,
+        "h": 540
+      },
+      "sourceSize": {
+        "w": 960,
+        "h": 540
+      }
+    },
+    "SpinLogo_V6A_00046.png": {
+      "frame": {
+        "x": 2887,
+        "y": 543,
+        "w": 960,
+        "h": 540
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 960,
+        "h": 540
+      },
+      "sourceSize": {
+        "w": 960,
+        "h": 540
+      }
+    },
+    "SpinLogo_V6A_00050.png": {
+      "frame": {
+        "x": 3849,
+        "y": 543,
+        "w": 960,
+        "h": 540
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 960,
+        "h": 540
+      },
+      "sourceSize": {
+        "w": 960,
+        "h": 540
+      }
+    },
+    "SpinLogo_V6A_00054.png": {
+      "frame": {
+        "x": 4811,
+        "y": 543,
+        "w": 960,
+        "h": 540
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 960,
+        "h": 540
+      },
+      "sourceSize": {
+        "w": 960,
+        "h": 540
+      }
+    },
+    "SpinLogo_V6A_00058.png": {
+      "frame": {
+        "x": 5773,
+        "y": 543,
+        "w": 960,
+        "h": 540
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 960,
+        "h": 540
+      },
+      "sourceSize": {
+        "w": 960,
+        "h": 540
+      }
+    },
+    "SpinLogo_V6A_00062.png": {
+      "frame": {
+        "x": 6735,
+        "y": 543,
+        "w": 960,
+        "h": 540
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 960,
+        "h": 540
+      },
+      "sourceSize": {
+        "w": 960,
+        "h": 540
+      }
+    },
+    "SpinLogo_V6A_00066.png": {
+      "frame": {
+        "x": 1,
+        "y": 1085,
+        "w": 960,
+        "h": 540
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 960,
+        "h": 540
+      },
+      "sourceSize": {
+        "w": 960,
+        "h": 540
+      }
+    },
+    "SpinLogo_V6A_00070.png": {
+      "frame": {
+        "x": 963,
+        "y": 1085,
+        "w": 960,
+        "h": 540
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 960,
+        "h": 540
+      },
+      "sourceSize": {
+        "w": 960,
+        "h": 540
+      }
+    },
+    "SpinLogo_V6A_00074.png": {
+      "frame": {
+        "x": 1925,
+        "y": 1085,
+        "w": 960,
+        "h": 540
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 960,
+        "h": 540
+      },
+      "sourceSize": {
+        "w": 960,
+        "h": 540
+      }
+    },
+    "SpinLogo_V6A_00078.png": {
+      "frame": {
+        "x": 2887,
+        "y": 1085,
+        "w": 960,
+        "h": 540
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 960,
+        "h": 540
+      },
+      "sourceSize": {
+        "w": 960,
+        "h": 540
+      }
+    },
+    "SpinLogo_V6A_00082.png": {
+      "frame": {
+        "x": 3849,
+        "y": 1085,
+        "w": 960,
+        "h": 540
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 960,
+        "h": 540
+      },
+      "sourceSize": {
+        "w": 960,
+        "h": 540
+      }
+    },
+    "SpinLogo_V6A_00086.png": {
+      "frame": {
+        "x": 4811,
+        "y": 1085,
+        "w": 960,
+        "h": 540
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 960,
+        "h": 540
+      },
+      "sourceSize": {
+        "w": 960,
+        "h": 540
+      }
+    },
+    "SpinLogo_V6A_00090.png": {
+      "frame": {
+        "x": 5773,
+        "y": 1085,
+        "w": 960,
+        "h": 540
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 960,
+        "h": 540
+      },
+      "sourceSize": {
+        "w": 960,
+        "h": 540
+      }
+    },
+    "SpinLogo_V6A_00094.png": {
+      "frame": {
+        "x": 6735,
+        "y": 1085,
+        "w": 960,
+        "h": 540
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 960,
+        "h": 540
+      },
+      "sourceSize": {
+        "w": 960,
+        "h": 540
+      }
+    },
+    "SpinLogo_V6A_00098.png": {
+      "frame": {
+        "x": 1,
+        "y": 1627,
+        "w": 960,
+        "h": 540
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 960,
+        "h": 540
+      },
+      "sourceSize": {
+        "w": 960,
+        "h": 540
+      }
+    },
+    "SpinLogo_V6A_00102.png": {
+      "frame": {
+        "x": 963,
+        "y": 1627,
+        "w": 960,
+        "h": 540
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 960,
+        "h": 540
+      },
+      "sourceSize": {
+        "w": 960,
+        "h": 540
+      }
+    },
+    "SpinLogo_V6A_00106.png": {
+      "frame": {
+        "x": 1925,
+        "y": 1627,
+        "w": 960,
+        "h": 540
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 960,
+        "h": 540
+      },
+      "sourceSize": {
+        "w": 960,
+        "h": 540
+      }
+    },
+    "SpinLogo_V6A_00110.png": {
+      "frame": {
+        "x": 2887,
+        "y": 1627,
+        "w": 960,
+        "h": 540
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 960,
+        "h": 540
+      },
+      "sourceSize": {
+        "w": 960,
+        "h": 540
+      }
+    },
+    "SpinLogo_V6A_00114.png": {
+      "frame": {
+        "x": 3849,
+        "y": 1627,
+        "w": 960,
+        "h": 540
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 960,
+        "h": 540
+      },
+      "sourceSize": {
+        "w": 960,
+        "h": 540
+      }
+    },
+    "SpinLogo_V6A_00118.png": {
+      "frame": {
+        "x": 4811,
+        "y": 1627,
+        "w": 960,
+        "h": 540
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 960,
+        "h": 540
+      },
+      "sourceSize": {
+        "w": 960,
+        "h": 540
+      }
+    },
+    "SpinLogo_V6A_00122.png": {
+      "frame": {
+        "x": 5773,
+        "y": 1627,
+        "w": 960,
+        "h": 540
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 960,
+        "h": 540
+      },
+      "sourceSize": {
+        "w": 960,
+        "h": 540
+      }
+    },
+    "SpinLogo_V6A_00126.png": {
+      "frame": {
+        "x": 6735,
+        "y": 1627,
+        "w": 960,
+        "h": 540
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 960,
+        "h": 540
+      },
+      "sourceSize": {
+        "w": 960,
+        "h": 540
+      }
+    },
+    "SpinLogo_V6A_00130.png": {
+      "frame": {
+        "x": 1,
+        "y": 2169,
+        "w": 960,
+        "h": 540
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 960,
+        "h": 540
+      },
+      "sourceSize": {
+        "w": 960,
+        "h": 540
+      }
+    },
+    "SpinLogo_V6A_00134.png": {
+      "frame": {
+        "x": 963,
+        "y": 2169,
+        "w": 960,
+        "h": 540
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 960,
+        "h": 540
+      },
+      "sourceSize": {
+        "w": 960,
+        "h": 540
+      }
+    },
+    "SpinLogo_V6A_00138.png": {
+      "frame": {
+        "x": 1925,
+        "y": 2169,
+        "w": 960,
+        "h": 540
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 960,
+        "h": 540
+      },
+      "sourceSize": {
+        "w": 960,
+        "h": 540
+      }
+    },
+    "SpinLogo_V6A_00142.png": {
+      "frame": {
+        "x": 2887,
+        "y": 2169,
+        "w": 960,
+        "h": 540
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 960,
+        "h": 540
+      },
+      "sourceSize": {
+        "w": 960,
+        "h": 540
+      }
+    },
+    "SpinLogo_V6A_00146.png": {
+      "frame": {
+        "x": 3849,
+        "y": 2169,
+        "w": 960,
+        "h": 540
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 960,
+        "h": 540
+      },
+      "sourceSize": {
+        "w": 960,
+        "h": 540
+      }
+    },
+    "SpinLogo_V6A_00150.png": {
+      "frame": {
+        "x": 4811,
+        "y": 2169,
+        "w": 960,
+        "h": 540
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 960,
+        "h": 540
+      },
+      "sourceSize": {
+        "w": 960,
+        "h": 540
+      }
+    },
+    "SpinLogo_V6A_00154.png": {
+      "frame": {
+        "x": 5773,
+        "y": 2169,
+        "w": 960,
+        "h": 540
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 960,
+        "h": 540
+      },
+      "sourceSize": {
+        "w": 960,
+        "h": 540
+      }
+    },
+    "SpinLogo_V6A_00158.png": {
+      "frame": {
+        "x": 6735,
+        "y": 2169,
+        "w": 960,
+        "h": 540
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 960,
+        "h": 540
+      },
+      "sourceSize": {
+        "w": 960,
+        "h": 540
+      }
+    }
+  },
+  "meta": {
+    "app": "http://www.codeandweb.com/texturepacker",
+    "version": "1.0",
+    "image": "spin_intro.png",
+    "format": "RGBA8888",
+    "size": {
+      "w": 7696,
+      "h": 2710
+    },
+    "scale": "1",
+    "smartupdate": "$TexturePacker:SmartUpdate:bfccc12df61db4dd13e9bef07c844cac:87b49f32eb4916f668ee263dd784eb15:989c0b9d025be82ed205668dee4005e5$"
+  }
+}

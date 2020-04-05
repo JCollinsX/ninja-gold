@@ -48,7 +48,7 @@
     "loading-overlay-show-time": {"type": "number", "default": 200, "playable-kit": true, "editor": { "title": "Loading show time", "description": "Loading screen show animation time." } },
     "loading-overlay-hide-time": { "type": "number","default": 1000,"playable-kit": true, "editor": { "title": "Loading hide time", "description": "Loading screen hide animation time." }},
     "loading-background-styles": {"type": "css","default": { "background-color": "#000000", "transform": "scale(1.07)" }},
-    "loading-icon-styles": {"type": "css","default": { "background": "url(Images/loader.png) no-repeat scroll center center / contain","left": "0","right": "0","top": "0","bottom": "0"} },
+    "loading-icon-styles": {"type": "css","default": { "background-color": "black","left": "0","right": "0","top": "0","bottom": "0"} },
     "loading-progress-styles": {"type": "css","default": {"line-height": "50px", "text-align": "center", "font-family": "Arial", "font-size": "50px", "font-weight": "bold", "color": "#fff", "top": "83%", "bottom": "25%",}},
     "loading-progress-fill-styles": {"type": "css","default": {"background": "block","left": "2%","width": "10%","bottom": "5%","height": "100%","background-color": "#78be20",}},
     "loading-code-progress-percent": 0.5,
@@ -154,6 +154,7 @@
     "Assets": {
         //Image
         "orient_switch.jpg": { "type": "image", "url": "Images/orient_switch.jpg" },
+        "loader": { "type": "image", "url": "Images/loader.png" },
         "logo": { "type": "image", "url": "Images/logo.png" },
 
         "background": { "type": "image", "url": "Images/basegame/background.png" },
@@ -257,6 +258,7 @@
         "anim_12drop": { "type": "atlas", "url": "Textures/animations/12drop.json" },
         "anim_13": { "type": "atlas", "url": "Textures/animations/13.json" },
         "anim_13drop": { "type": "atlas", "url": "Textures/animations/13drop.json" },
+        "spin_intro": { "type": "atlas", "url": "Textures/spin_intro.json" },
 
         //############ Sound #######
         "anticipation": { "type": "sound", "url": "Sounds/anticipation.mp3" },
