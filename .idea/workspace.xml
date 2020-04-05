@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="dd7d46ce-6e1c-4eaa-84c4-b489fb97a84a" name="Default Changelist" comment="">
+    <list default="true" id="dd7d46ce-6e1c-4eaa-84c4-b489fb97a84a" name="Default Changelist" comment="api integration completed">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/App/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/App/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/App/Screens/Gameplay.js" beforeDir="false" afterPath="$PROJECT_DIR$/App/Screens/Gameplay.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Math/Slots/Escalibur.js" beforeDir="false" afterPath="$PROJECT_DIR$/Math/Slots/Escalibur.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/App/Setting.js" beforeDir="false" afterPath="$PROJECT_DIR$/App/Setting.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,7 +74,14 @@
       <workItem from="1585240111971" duration="5234000" />
       <workItem from="1585264833789" duration="1390000" />
       <workItem from="1585291084227" duration="17967000" />
-      <workItem from="1585325546217" duration="6535000" />
+      <workItem from="1585325546217" duration="8005000" />
+      <workItem from="1585494590256" duration="10718000" />
+      <workItem from="1585555245524" duration="7399000" />
+      <workItem from="1585606035214" duration="1270000" />
+      <workItem from="1585859074685" duration="2374000" />
+      <workItem from="1585943716213" duration="3230000" />
+      <workItem from="1585981479211" duration="8064000" />
+      <workItem from="1586072578233" duration="13681000" />
     </task>
     <task id="LOCAL-00001" summary="updated gitignore file">
       <created>1584307555461</created>
@@ -112,7 +118,14 @@
       <option name="project" value="LOCAL" />
       <updated>1585301805008</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="api integration completed">
+      <created>1585334596135</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1585334596136</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -126,36 +139,42 @@
     <MESSAGE value="freespin showing animation completed" />
     <MESSAGE value="freespin glow animation not yet completed" />
     <MESSAGE value="Ui completed&#10;I am integrating API" />
-    <option name="LAST_COMMIT_MESSAGE" value="Ui completed&#10;I am integrating API" />
+    <MESSAGE value="api integration completed" />
+    <option name="LAST_COMMIT_MESSAGE" value="api integration completed" />
   </component>
   <component name="WindowStateProjectService">
     <state x="724" y="329" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1584474399806">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="724" y="329" key="#com.intellij.fileTypes.FileTypeChooser/1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1584474399806" />
-    <state x="585" y="119" key="CommitChangelistDialog2" timestamp="1585301802517">
+    <state x="585" y="119" key="CommitChangelistDialog2" timestamp="1585494635229">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="585" y="119" key="CommitChangelistDialog2/1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1585301802517" />
-    <state x="552" y="259" key="Vcs.Push.Dialog.v2" timestamp="1585301807953">
+    <state x="585" y="119" key="CommitChangelistDialog2/1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1585494635229" />
+    <state x="184" y="93" width="1536" height="866" key="DiffContextDialog" timestamp="1585944150342">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="552" y="259" key="Vcs.Push.Dialog.v2/1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1585301807953" />
-    <state x="647" y="156" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1585179054944">
+    <state x="184" y="93" width="1536" height="866" key="DiffContextDialog/1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1585944150342" />
+    <state x="552" y="259" key="Vcs.Push.Dialog.v2" timestamp="1585334598505">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="647" y="156" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1585179054944" />
-    <state x="656" y="257" width="737" height="606" key="find.popup" timestamp="1585330771276">
+    <state x="552" y="259" key="Vcs.Push.Dialog.v2/1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1585334598505" />
+    <state x="647" y="156" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1586080563045">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="656" y="257" width="737" height="606" key="find.popup/1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1585330771276" />
+    <state x="647" y="156" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1586080563045" />
+    <state x="656" y="257" width="737" height="606" key="find.popup" timestamp="1585605111330">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="656" y="257" width="737" height="606" key="find.popup/1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1585605111330" />
     <state x="616" y="243" key="run.anything.popup" timestamp="1584612582371">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="616" y="243" key="run.anything.popup/1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1584612582371" />
-    <state x="623" y="227" width="672" height="678" key="search.everywhere.popup" timestamp="1585331888954">
+    <state x="623" y="227" width="672" height="678" key="search.everywhere.popup" timestamp="1586013131985">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="623" y="227" width="672" height="678" key="search.everywhere.popup/1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1585331888954" />
+    <state x="623" y="227" width="672" height="678" key="search.everywhere.popup/1920.0.1920.1050/0.0.1920.1050@0.0.1920.1050" timestamp="1586013131985" />
+    <state x="2543" y="227" width="672" height="678" key="search.everywhere.popup/1920.0.1920.1050/0.0.1920.1050@1920.0.1920.1050" timestamp="1585581540075" />
   </component>
 </project>
